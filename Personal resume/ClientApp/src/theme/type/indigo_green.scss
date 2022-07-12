@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$palette-indigo: mat.define-palette(mat.$indigo-palette);
+$palette-green: mat.define-palette(mat.$green-palette);
+$palette-pink: mat.define-palette(mat.$pink-palette);
+
+$theme: mat.define-light-theme((
+  color: (
+    primary: $palette-indigo,
+    accent: $palette-green,
+    warn: $palette-pink
+  )
+));
