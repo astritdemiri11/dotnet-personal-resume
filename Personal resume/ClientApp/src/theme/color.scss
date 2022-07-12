@@ -1,0 +1,135 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin universal-colors($theme) {
+  $primary: map.get($theme, primary);
+  $accent: map.get($theme, accent);
+  $warn: map.get($theme, warn);
+  $foreground: map.get($theme, foreground);
+  $background: map.get($theme, background);
+
+  /*Primary*/
+
+  //Background
+  .theme-primary_background {
+    background-color: mat.get-color-from-palette($primary);
+  }
+
+  .theme-primary_background_darker {
+    background-color: mat.get-color-from-palette($primary, darker);
+  }
+
+  .theme-primary_background_lighter {
+    background-color: mat.get-color-from-palette($primary, lighter);
+  }
+
+  //Border
+  .theme-primary_border {
+    border-color: mat.get-color-from-palette($primary);
+  }
+
+  //Color
+  .theme-primary_color {
+    color: mat.get-color-from-palette($primary);
+  }
+
+  /*Accent*/
+
+  //Background
+  .theme-accent_background {
+    background-color: mat.get-color-from-palette($accent);
+  }
+
+  .theme-accent_background_darker {
+    background-color: mat.get-color-from-palette($accent, darker);
+  }
+
+  .theme-accent_background_lighter {
+    background-color: mat.get-color-from-palette($accent, lighter);
+  }
+
+  //Color
+  .theme-accent_color {
+    color: mat.get-color-from-palette($accent);
+  }
+
+  .theme-accent_color_darker {
+    color: mat.get-color-from-palette($accent, darker);
+  }
+
+  .theme-accent_color_lighter {
+    color: mat.get-color-from-palette($accent, lighter);
+  }
+
+  /*Warn*/
+
+  //Background
+  .theme-warn_background {
+    background-color: mat.get-color-from-palette($warn);
+  }
+
+  //Color
+  .theme-warn_color {
+    color: mat.get-color-from-palette($warn);
+  }
+}
+
+.color-aqua {
+    color: #4ec5c1;
+}
+
+.color-black {
+    color: #000000;
+}
+
+.color-blue {
+  color: #61a2ff;
+}
+
+.color-blue_light {
+  color: #428bca;
+}
+
+.color-brown {
+  color: #a94442;
+}
+
+.color-crocodile {
+    color: #717B0A ;
+}
+
+.color-electricLime {
+    color: #88d317;
+}
+
+.color-gold {
+    color: #ffd700;
+}
+
+.color-gray {
+  color: #808080;
+}
+
+.color-green {
+  color: #4CAF50;
+}
+
+.color-pink {
+  color: #fd397a;
+}
+
+.color-purple {
+  color: #9c27b0;
+}
+
+.color-red {
+  color: #ff6961;
+}
+
+.color-scrub {
+    color: #c0b3ad;
+}
+
+.color-white {
+  color: #ffffff;
+}

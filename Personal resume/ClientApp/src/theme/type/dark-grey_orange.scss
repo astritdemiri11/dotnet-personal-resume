@@ -1,0 +1,18 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import "./palette/dark-grey.scss";
+@import "./palette/orange.scss";
+
+$palette-dark_grey: mat.define-palette($custom-palette-dark_grey);
+$palette-orange: mat.define-palette($custom-palette-orange);
+$palette-pink: mat.define-palette(mat.$pink-palette);
+
+$dark-theme-dark_grey_orange: mat.define-dark-theme((
+  color: (
+    primary: $palette-dark_grey,
+    accent: $palette-orange,
+    warn: $palette-pink
+  )
+));

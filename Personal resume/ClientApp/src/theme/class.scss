@@ -1,0 +1,159 @@
+/*Container*/
+.container-fill {
+  height: 100% !important;
+  min-height: 100% !important;
+  min-width: 100% !important;
+  width: 100% !important;
+}
+
+/*Flex*/
+.display-flex {
+  box-sizing: border-box;
+  display: flex;
+}
+
+//Direction
+.flex-direction--default {
+  flex-direction: row;
+}
+
+.flex-direction_row_reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-direction_column {
+  flex-direction: column;
+}
+
+.flex-direction_column_reverse {
+  flex-direction: column-reverse;
+}
+
+//Main axis
+.flex-main--default {
+  justify-content: flex-start;
+}
+
+.flex-main_end {
+  justify-content: flex-end;
+}
+
+.flex-main_center {
+  justify-content: center;
+}
+
+.flex-main_space_between {
+  justify-content: space-between;
+}
+
+.flex-main_space_around {
+  justify-content: space-around;
+}
+
+.flex-main_space_evenly {
+  justify-content: space-evenly;
+}
+
+//Cross axis
+.flex-cross--default {
+  align-items: stretch;
+}
+
+.flex-cross_center {
+  align-items: center;
+}
+
+.flex-cross_end {
+  align-items: flex-end;
+}
+
+.flex-cross_start {
+  align-items: flex-start;
+}
+
+.flex-wrap--default {
+  flex-wrap: nowrap;
+}
+
+.flex-wrap_wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-wrap_reverse {
+  flex-wrap: wrap-reverse;
+}
+
+//Flex item
+.align-self--default {
+  align-self: auto;
+}
+
+.align-self_stretch {
+  align-self: stretch;
+}
+
+.align-self_flex_start {
+  align-self: flex-start;
+}
+
+.align-self_flex_end {
+  align-self: flex-end;
+}
+
+.align-self_center {
+  align-self: center;
+}
+
+.flex--default {
+  flex: 0 1 auto;
+}
+
+.flex-basis--default {
+  flex-basis: auto;
+}
+
+.flex-basis_0 {
+  flex-basis: 0;
+}
+
+.flex-flow--default {
+  flex-flow: row nowrap
+}
+
+.flex-grow--default {
+  flex-grow: 0;
+}
+
+.flex-grow_1 {
+  flex-grow: 1;
+}
+
+.flex-order--default {
+  order: 0;
+}
+
+.flex-shrink--default {
+  flex-shrink: 1;
+}
+
+/*Scroll*/
+.scroll {
+    scroll-behavior: smooth;
+}
+
+/*Text*/
+.text-align_center {
+    text-align: center;
+}
+
+.text-align_left {
+  text-align: left;
+}
+
+.text-align_right {
+    text-align: right;
+}
+
+.text-decoration_underline {
+    text-decoration: underline;
+}

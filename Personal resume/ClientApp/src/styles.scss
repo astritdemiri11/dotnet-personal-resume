@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@import "./theme/animation";
+@import "./theme/class";
+@import "./theme/color";
+
+@import "./theme/type/dark-grey_orange";
+
+@include mat.core-theme($dark-theme-dark_grey_orange);
+@include mat.all-component-themes($dark-theme-dark_grey_orange);
+
+@include universal-colors($dark-theme-dark_grey_orange);
+
+@import "./theme/type/indigo-green";
+
+.indigo_green {
+    @include mat.core-color($light-theme-indigo_green);
+    @include mat.button-color($light-theme-indigo_green);
+}
+
+@import "./theme/maintain";
