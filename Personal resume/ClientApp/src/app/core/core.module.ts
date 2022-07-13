@@ -13,6 +13,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
+import { WaterRippleComponent } from './components/intro/water-ripple/water-ripple.component';
+import { ParticlesComponent } from './components/intro/particles/particles.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { NavigationComponent } from './components/navigation/navigation.componen
     HeaderComponent,
     NavigationComponent,
     MenuComponent,
-    IntroComponent
+    IntroComponent,
+    WaterRippleComponent,
+    ParticlesComponent
   ],
   imports: [
     CommonModule,
