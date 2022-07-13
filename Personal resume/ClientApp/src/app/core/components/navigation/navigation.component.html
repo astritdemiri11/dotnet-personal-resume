@@ -1,17 +1,18 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #sidenav class="sidenav" fixedInViewport
-      [attr.role]="(sharedService.model.isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(sharedService.model.isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(sharedService.model.isHandset$ | async) === false">
-    <mat-toolbar>Menu</mat-toolbar>
-    <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
-    </mat-nav-list>
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="getSidenavRole()" [mode]="getSidenavMode()"
+    [opened]="isSidenavOpened()">
+    <mat-toolbar>
+      <img src="assets/images/.png/logo.png" class="height_50"/>
+    </mat-toolbar>
+
+    <app-menu *ngIf="isHandset()"></app-menu>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <app-header [sidenav]="sidenav"></app-header>
-    <!-- Add Content Here -->
+
+    <main>
+      <app-intro></app-intro>
+    </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

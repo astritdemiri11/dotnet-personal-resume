@@ -1,3 +1,77 @@
+/*Position*/
+.position_relative {
+  position: relative;
+}
+
+.position_fixed {
+  position: fixed;
+}
+
+.z-index_1 {
+  z-index: 1;
+}
+
+.z-index_2 {
+  z-index: 2;
+}
+
+/*Dimension*/
+.width_100 {
+  width: 100%;
+}
+
+.height_50 {
+  height: 50%;
+}
+
+.height_100 {
+  height: 100%;
+}
+
+.dimension-16p {
+  width: 16px !important;
+  height: 16px !important;
+  font-size: 16px !important;
+}
+
+.dimension-18p {
+  width: 18px !important;
+  height: 18px !important;
+  font-size: 18px !important;
+}
+
+.dimension-32p {
+  width: 32px !important;
+  height: 32px !important;
+  font-size: 32px !important;
+}
+
+/*Space*/
+.padding_16p {
+  padding: 16px;
+}
+
+.padding-left_16p {
+  padding-left: 16px;
+}
+
+.padding-left_32p {
+  padding-left: 32px;
+}
+
+.padding-left_48p {
+  padding-left: 48px;
+}
+
+.margin-left_16p {
+  margin-left: 16px;
+}
+
+
+.margin-left_24p {
+  margin-left: 24px;
+}
+
 /*Container*/
 .container-fill {
   height: 100% !important;
@@ -5,6 +79,26 @@
   min-width: 100% !important;
   width: 100% !important;
 }
+
+@media (min-width: 600px) {
+  .container-max-width {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container-max-width {
+    max-width: 880px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-max-width {
+    max-width: 1140px;
+  }
+}
+
+.container-max-width-
 
 /*Flex*/
 .display-flex {
@@ -117,7 +211,7 @@
 }
 
 .flex-flow--default {
-  flex-flow: row nowrap
+  flex-flow: row nowrap;
 }
 
 .flex-grow--default {
@@ -138,12 +232,25 @@
 
 /*Scroll*/
 .scroll {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
+/*Font*/
+.font-size_15p {
+  font-size: 15px;
+}
+
+.font-size_16p {
+  font-size: 16px;
+}
+
+.font-size_32p {
+  font-size: 32px;
 }
 
 /*Text*/
 .text-align_center {
-    text-align: center;
+  text-align: center;
 }
 
 .text-align_left {
@@ -151,9 +258,9 @@
 }
 
 .text-align_right {
-    text-align: right;
+  text-align: right;
 }
 
 .text-decoration_underline {
-    text-decoration: underline;
+  text-decoration: underline;
 }

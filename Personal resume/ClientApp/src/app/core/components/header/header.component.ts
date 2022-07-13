@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { SharedService } from 'src/app/shared/shared.service';
+import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +8,11 @@ import { SharedService } from 'src/app/shared/shared.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  @Input() sidenav?: MatSidenav
-  constructor(public sharedService: SharedService) { }
+  @Input() sidenav?: MatSidenav;
+
+  constructor(private sharedService: SharedService) { }
+
+  isHandset() {
+    return this.sharedService.business.isHandset();
+  }
 }

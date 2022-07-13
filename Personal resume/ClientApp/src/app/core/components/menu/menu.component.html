@@ -1,0 +1,34 @@
+<div fxLayout fxLayout="space-between center">
+  <mat-nav-list fxFlex [fxLayout]="isHandset() ? 'column' : 'row'">
+    <a mat-list-item href="#home">
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('home')">Home</span>
+    </a>
+
+    <a mat-list-item href="#about">
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('about')">About</span>
+    </a>
+
+    <a mat-list-item href="#resume">
+
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('resume')">Resume</span>
+    </a>
+
+    <a mat-list-item href="#portfolio">
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('portfolio')">Portfolio</span>
+    </a>
+
+    <a mat-list-item href="#blog">
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('blog')">Blog</span>
+    </a>
+
+    <a mat-list-item href="#contact">
+      <span class="text font-size_15p" [class.theme-accent_color]="isActive('contact')">Contact</span>
+    </a>
+  </mat-nav-list>
+
+  <div *ngIf="!isHandset()"  fxLayout fxLayoutAlign="space-between center" fxLayoutGap="16px" class="phone position_relative margin-left_24p padding-left_48p">
+    <mat-icon class="dimension-18p">phone</mat-icon>
+
+    <span class="theme-accent_color font-size_15p">+355 69 6402822</span>
+  </div>
+</div>

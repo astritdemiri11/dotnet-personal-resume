@@ -1,0 +1,28 @@
+.mat-list-base {
+  padding-top: 0;
+}
+
+a .text {
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.phone {
+  font-family: 'Inter', sans-serif;
+}
+
+.phone::before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: white;
+  left: 0px;
+}
+
+@media screen and (min-width: 992px) {
+  a {
+      margin-right: 8px;
+  }
+}

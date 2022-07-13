@@ -1,20 +1,19 @@
 
 @use '@angular/material' as mat;
-@use "./theme/type/dark-grey_orange" as dark-grey_orange;
-@use "./theme/type/indigo_green" as indigo_green;
+@use "./theme/type/dark-grey_orange" as theme-dark-grey_orange;
+@use "./theme/type/indigo_green" as theme-indigo_green;
 @use "./theme/color" as colors;
 
 @import '~@angular/material/theming';
 
-@import "./theme/animation";
-@import "./theme/class";
-
-@include angular-material-color(dark-grey_orange.$theme);
-@include colors.universal-colors(dark-grey_orange.$theme);
+@include angular-material-color(theme-dark-grey_orange.$theme);
+@include colors.universal-colors(theme-dark-grey_orange.$theme);
 
 .theme-indigo_green {
-    @include angular-material-color(indigo_green.$theme);
-    @include colors.universal-colors(indigo_green.$theme);
+    @include angular-material-color(theme-indigo_green.$theme);
+    @include colors.universal-colors(theme-indigo_green.$theme);
 }
 
+@import "./theme/animation";
+@import "./theme/class";
 @import "./theme/maintain";

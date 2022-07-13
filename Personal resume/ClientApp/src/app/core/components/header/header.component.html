@@ -1,7 +1,14 @@
-<mat-toolbar color="primary">
-  <button *ngIf="sidenav && (sharedService.model.isHandset$ | async)" type="button" aria-label="Toggle sidenav"
-    mat-icon-button (click)="sidenav.toggle()">
-    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-  </button>
-  <span>personal-resume</span>
+<mat-toolbar fxLayout fxLayoutAlign="center" color="primary" class="header-toolbar position_fixed z-index_2">
+  <div fxFlex fxLayoutAlign="space-between center" class="width_100 container-max-width" [class.padding_16p]="!isHandset()">
+    <a href="/" class="logo-link">
+      <img src="assets/images/.png/logo.png" />
+    </a>
+
+    <app-menu *ngIf="!isHandset()"></app-menu>
+
+    <button *ngIf="sidenav && isHandset()" type="button" aria-label="Toggle sidenav" mat-icon-button
+      (click)="sidenav.toggle()">
+      <mat-icon aria-label="Side nav toggle icon" class="dimension-32p">menu</mat-icon>
+    </button>
+  </div>
 </mat-toolbar>
