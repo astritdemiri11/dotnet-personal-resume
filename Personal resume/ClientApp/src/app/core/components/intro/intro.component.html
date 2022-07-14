@@ -1,5 +1,49 @@
-<section fxFlexFill fxLayout fxLayoutAlign="center">
-  <!-- <app-particles></app-particles> -->
+<!-- <app-particles fxFlexFill class="display_block position_absolute overflow_hidden top_0 left_0 opacity_0_7">
+</app-particles> -->
 
-  <!-- <app-water-ripple class="z-index_1"></app-water-ripple> -->
-</section>
+<div fxFlexFill fxLayout fxLayoutAlign="center">
+  <div fxFlex fxLayoutAlign="space-between center" class="width_100 container-max-width"
+    [class.padding_16p]="!isHandset()">
+    <div fxFlex class="fadeInLeft">
+      <h3 class="text-hello">
+        <span class="theme-accent_color">Hello, I’m</span>
+      </h3>
+
+      <h1 class="text-name">
+        <span>Astrit <br> Demiri</span>
+      </h1>
+
+      <h2 class="text-profession">
+        <span>Web Developer</span>
+      </h2>
+
+      <div class="st-hero-btn">
+        <a href="#contact" mat-raised-button color="accent">Hire me</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div fxFlexFill fxLayout fxLayoutAlign="end stretch"
+  class="position_absolute top_0 right_0 width_100 height_100 z-index_1">
+  <div fxFlexAlign="end">
+    <div fxLayout fxLayoutAlign="space-between center" class="
+      margin-bottom_32p padding-right_64p padding-left_16p
+      theme-primary_background_lighter theme-primary_border_300
+      social-media-container fadeInLeft">
+      <button fxLayout fxLayoutAlign="space-between center" fxLayoutGap="8px" mat-raised-button color="primary"
+        class="social-media-button theme-primary_border_300">
+        <mat-icon svgIcon="social-media:linkedin" class="padding_8p"></mat-icon>
+        <!-- <span class="padding_8p"></span>
+        <span>LinkedIn</span> -->
+      </button>
+    </div>
+  </div>
+
+
+  <div fxFlex="45" class="position_relative overflow_hidden">
+    <img fxFlexFill src="./assets/images/.jpg/me.jpg" class="fadeInRight" />
+    <!-- <app-water-ripple fxFlexFill class="display_block position_absolute top_0 left_0 fadeInRight">
+    </app-water-ripple> -->
+  </div>
+</div>

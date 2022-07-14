@@ -1,10 +1,26 @@
 /*Position*/
-.position_relative {
-  position: relative;
+.position_absolute {
+  position: absolute;
 }
 
 .position_fixed {
   position: fixed;
+}
+
+.position_relative {
+  position: relative;
+}
+
+.top_0 {
+  top: 0;
+}
+
+.left_0 {
+  left: 0;
+}
+
+.right_0 {
+  right: 0;
 }
 
 .z-index_1 {
@@ -15,7 +31,16 @@
   z-index: 2;
 }
 
+/*Opacity*/
+.opacity_0_7 {
+  opacity: 0.7;
+}
+
 /*Dimension*/
+.width_50 {
+  width: 50%;
+}
+
 .width_100 {
   width: 100%;
 }
@@ -47,6 +72,9 @@
 }
 
 /*Space*/
+.padding_8p {
+  padding: 8px;
+}
 .padding_16p {
   padding: 16px;
 }
@@ -61,6 +89,14 @@
 
 .padding-left_48p {
   padding-left: 48px;
+}
+
+.padding-right_64p {
+  padding-right: 64px;
+}
+
+.margin-bottom_32p {
+  margin-bottom: 32px;
 }
 
 .margin-left_16p {
@@ -78,6 +114,8 @@
 }
 
 .container-fill {
+  top: 0;
+  left: 0;
   height: 100% !important;
   min-height: 100% !important;
   min-width: 100% !important;
@@ -237,6 +275,14 @@
 /*Scroll*/
 .scroll {
   scroll-behavior: smooth;
+}
+
+.overflow_hidden {
+  overflow: hidden;
+}
+
+.overflow-y_scroll {
+  overflow-y: scroll;
 }
 
 /*Font*/

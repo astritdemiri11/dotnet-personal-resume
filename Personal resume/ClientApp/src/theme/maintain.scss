@@ -10,26 +10,27 @@ body {
     margin: 0;
     width: 100%;
     height: 100%;
+
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
 
-// ::-webkit-scrollbar {
-//     height: 10px;
-//     width: 10px
-// }
+::-webkit-scrollbar {
+    height: 10px;
+    width: 10px
+}
 
-// ::-webkit-scrollbar-thumb:hover {
-//     background: #afadaf;
-// }
+::-webkit-scrollbar-thumb:hover {
+    background: #afadaf;
+}
 
-// ::-webkit-scrollbar-track-piece {
-//     opacity: 0.5;
-//     background: #eee
-// }
+::-webkit-scrollbar-track-piece {
+    opacity: 0.5;
+    background: #eee
+}
 
-// ::-webkit-scrollbar-thumb {
-//     background: #ccc8cc;
-//     border-radius: 10px;
-// }
+::-webkit-scrollbar-thumb {
+    background: #ccc8cc;
+    border-radius: 10px;
+}

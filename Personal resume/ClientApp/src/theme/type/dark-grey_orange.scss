@@ -4,7 +4,7 @@
 
 @include mat.core();
 
-$palette-dark-grey: mat.define-palette(palette-dark-grey.$palette);
+$palette-dark-grey: mat.define-palette(palette-dark-grey.$palette, 500, 400, 700);
 $palette-orange: mat.define-palette(palette-orange.$palette);
 $palette-pink: mat.define-palette(mat.$pink-palette);
 

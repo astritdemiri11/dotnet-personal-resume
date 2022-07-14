@@ -8,11 +8,11 @@
     <app-menu *ngIf="isHandset()"></app-menu>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <app-header [sidenav]="sidenav" class="display_block"></app-header>
+  <mat-sidenav-content fxLayout="column">
+    <app-header [sidenav]="sidenav" class="display_block width_100"></app-header>
 
-    <main>
-      <app-intro></app-intro>
+    <main fxFlex class="overflow-y_auto">
+      <app-intro fxFlexFill class="display_block position_relative theme-primary_background"></app-intro>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

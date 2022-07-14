@@ -1,5 +1,42 @@
-:host {
-  width: 100%;
-  height: 100%;
-  display: block;
+.text-hello {
+  font-family: "Inter", sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.text-name {
+  font-family: "Inter", sans-serif;
+  font-size: 120px;
+  margin-bottom: 24px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.text-profession {
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  margin-bottom: 41px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.social-media-container {
+  height: 80px;
+  border-width: 1px;
+  border-style: solid;
+  border-right: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.social-media-button {
+  overflow: hidden;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50px;
+  height: 50px;
+  padding: 0 !important;
+  min-width: 50px !important;
 }

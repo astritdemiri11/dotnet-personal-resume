@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-water-ripple',
@@ -9,6 +9,7 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
 export class WaterRippleComponent implements OnInit {
 
   constructor(
+    private elementRef: ElementRef,
     private renderer2: Renderer2,
     @Inject(DOCUMENT) private document: Document) { }
 
@@ -21,13 +22,15 @@ export class WaterRippleComponent implements OnInit {
     script.onload = () => {
       const w = (window as any);
 
-      const pixel = w.create2DArray(w.createRadialCanvas(2, 2));
+      const pixel = w.create2DArray(w.createRadialCanvas(3, 3));
       const finger = w.create2DArray(w.createRadialCanvas(14, 14));
 
-      const width = 700;
-      const height = 850;
+      const width = this.elementRef.nativeElement.clientWidth;
+      const height = this.elementRef.nativeElement.clientHeight;
 
-      var waterModel = new w.WaterModel(width, height, {
+      console.log(width, height);
+
+      let waterModel = new w.WaterModel(width, height, {
         resolution: 2.0,
         interpolate: false,
         damping: 0.985,
@@ -36,7 +39,8 @@ export class WaterRippleComponent implements OnInit {
         maxFps: 50,
         showStats: false
       });
-      var waterCanvas = new w.WaterCanvas(width, height, "waterHolder", waterModel, {
+
+      new w.WaterCanvas(width, height, "waterHolder", waterModel, {
         backgroundImageUrl: './assets/images/.jpg/me.jpg',
         lightRefraction: 9.0,
         lightReflection: 0.1,
@@ -44,27 +48,37 @@ export class WaterRippleComponent implements OnInit {
       });
 
       // const raindrop = w.create2DArray(w.createRadialCanvas(4, 4));
-      // var rainMaker = new w.RainMaker(width, height, waterModel, raindrop);
+      // let rainMaker = new w.RainMaker(width, height, waterModel, raindrop);
       // rainMaker.setRaindropsPerSecond(1);
 
       const canvasHolder = document.getElementById("waterHolder");
 
       if (canvasHolder) {
-        var mouseDown = false;
-        canvasHolder.addEventListener("mousedown", function (e) {
+        let mouseDown = false;
+
+        canvasHolder.addEventListener("mousedown", (e) => {
           mouseDown = true;
-          var x = (e.clientX - canvasHolder.offsetLeft) + document.body.scrollLeft + document.documentElement.scrollLeft;
-          var y = (e.clientY - canvasHolder.offsetTop) + document.body.scrollTop + document.documentElement.scrollTop;
+
+          const rect = canvasHolder.getBoundingClientRect();
+
+          const x = (e.clientX - rect.left) + document.body.scrollLeft + document.documentElement.scrollLeft;
+          const y = (e.clientY - rect.top) + document.body.scrollTop + document.documentElement.scrollTop;
+
           waterModel.touchWater(x, y, 1.5, mouseDown ? finger : pixel);
         }, false);
 
-        canvasHolder.addEventListener("mouseup", function (e) {
+        canvasHolder.addEventListener("mouseup", (_e) => {
           mouseDown = false;
         }, false);
 
-        canvasHolder.addEventListener("mousemove", function (e) {
-          var x = (e.clientX - canvasHolder.offsetLeft) + document.body.scrollLeft + document.documentElement.scrollLeft;
-          var y = (e.clientY - canvasHolder.offsetTop) + document.body.scrollTop + document.documentElement.scrollTop;
+        canvasHolder.addEventListener("mousemove", (e) => {
+          const rect = canvasHolder.getBoundingClientRect();
+
+          const x = (e.clientX - rect.left) + document.body.scrollLeft + document.documentElement.scrollLeft;
+          const y = (e.clientY - rect.top) + document.body.scrollTop + document.documentElement.scrollTop;
+
+          console.log(x, y);
+
           waterModel.touchWater(x, y, 1.5, mouseDown ? finger : pixel);
         }, false);
       }
