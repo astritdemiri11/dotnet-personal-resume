@@ -26,17 +26,26 @@
 
 <div fxFlexFill fxLayout fxLayoutAlign="end stretch"
   class="position_absolute top_0 right_0 width_100 height_100 z-index_1">
-  <div fxFlexAlign="end">
-    <div fxLayout fxLayoutAlign="space-between center" class="
+  <div fxFlex="25" fxFlexAlign="end">
+    <div fxLayout fxLayoutAlign="space-between center" fxLayoutGap="8px" class="
       margin-bottom_32p padding-right_64p padding-left_16p
       theme-primary_background_lighter theme-primary_border_300
       social-media-container fadeInLeft">
-      <button fxLayout fxLayoutAlign="space-between center" fxLayoutGap="8px" mat-raised-button color="primary"
-        class="social-media-button theme-primary_border_300">
-        <mat-icon svgIcon="social-media:linkedin" class="padding_8p"></mat-icon>
-        <!-- <span class="padding_8p"></span>
-        <span>LinkedIn</span> -->
-      </button>
+
+      <ng-container *ngFor="let socialMedia of socialMedias">
+        <a href="#" color="primary" class="social-media-button theme-primary_border_300">
+          <div fxLayout fxLayoutAlign="start stretch">
+            <div fxLayout fxLayoutAlign="center center" class="social-media-icon">
+              <mat-icon [svgIcon]="socialMedia.icon"></mat-icon>
+            </div>
+
+            <div fxFlex fxLayout fxLayoutAlign="center center" class="social-media-name">
+              <span class="font-size_16p">{{ socialMedia.name }}</span>
+            </div>
+          </div>
+        </a>
+      </ng-container>
+
     </div>
   </div>
 
