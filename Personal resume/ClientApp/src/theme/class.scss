@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.bottom_0 {
+  bottom: 0;
+}
+
 .top_0 {
   top: 0;
 }
@@ -21,6 +25,14 @@
 
 .right_0 {
   right: 0;
+}
+
+.z-index_-1 {
+  z-index: -1;
+}
+
+.z-index_0 {
+  z-index: 0;
 }
 
 .z-index_1 {
@@ -96,8 +108,20 @@
   padding-left: 48px;
 }
 
+.padding-right_16p {
+  padding-right: 16px;
+}
+
+.padding-right_32p {
+  padding-right: 32px;
+}
+
 .padding-right_64p {
   padding-right: 64px;
+}
+
+.margin_0 {
+  margin: 0 !important;
 }
 
 .margin-bottom_32p {
@@ -304,6 +328,10 @@
 }
 
 /*Text*/
+.text-transform_uppercase {
+  text-transform: uppercase;
+}
+
 .text-align_center {
   text-align: center;
 }

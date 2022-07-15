@@ -2,7 +2,7 @@
 
 @include mat.core();
 
-$palette-indigo: mat.define-palette(mat.$indigo-palette);
+$palette-indigo: mat.define-palette(mat.$indigo-palette, 500, 400, 700);
 $palette-green: mat.define-palette(mat.$green-palette);
 $palette-pink: mat.define-palette(mat.$pink-palette);
 

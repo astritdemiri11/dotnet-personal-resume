@@ -9,12 +9,16 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgParticlesModule } from 'ng-particles';
 
 import { SharedModule } from '../shared/shared.module';
-import { HeaderComponent } from './components/header/header.component';
-import { IntroComponent } from './components/intro/intro.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { AboutMeComponent } from './components/navigation/about-me/about-me.component';
+import { HeaderComponent } from './components/navigation/header/header.component';
+import { MenuComponent } from './components/navigation/header/menu/menu.component';
+import { InfoComponent } from './components/navigation/intro/info/info.component';
+import { IntroComponent } from './components/navigation/intro/intro.component';
+import { ParticlesComponent } from './components/navigation/intro/particles/particles.component';
+import { SocialMediaComponent } from './components/navigation/intro/social-media/social-media.component';
+import { WaterRippleComponent } from './components/navigation/intro/water-ripple/water-ripple.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
-import { WaterRippleComponent } from './components/intro/water-ripple/water-ripple.component';
-import { ParticlesComponent } from './components/intro/particles/particles.component';
+import { SectionHeaderComponent } from './components/section-header/section-header.component';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { ParticlesComponent } from './components/intro/particles/particles.compo
     MenuComponent,
     IntroComponent,
     WaterRippleComponent,
-    ParticlesComponent
+    ParticlesComponent,
+    InfoComponent,
+    SocialMediaComponent,
+    AboutMeComponent,
+    SectionHeaderComponent
   ],
   imports: [
     CommonModule,

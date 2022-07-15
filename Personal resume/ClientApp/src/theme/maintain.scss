@@ -17,20 +17,14 @@ body {
 }
 
 ::-webkit-scrollbar {
-    height: 10px;
-    width: 10px
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #afadaf;
+    height: 2px;
+    width: 2px
 }
 
 ::-webkit-scrollbar-track-piece {
     opacity: 0.5;
-    background: #eee
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #ccc8cc;
     border-radius: 10px;
 }

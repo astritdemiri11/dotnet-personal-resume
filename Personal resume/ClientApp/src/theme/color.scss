@@ -23,18 +23,30 @@
     background-color: mat.get-color-from-palette($primary, lighter);
   }
 
+  .theme-primary_background_100 {
+    background-color: mat.get-color-from-palette($primary, 100);
+  }
+
+  .theme-primary_background_400 {
+    background-color: mat.get-color-from-palette($primary, 400);
+  }
+
   //Border
   .theme-primary_border {
     border-color: mat.get-color-from-palette($primary);
   }
 
-  .theme-primary_border_300 {
-    border-color: mat.get-color-from-palette($primary, 300) !important;
+  .theme-primary_border_200 {
+    border-color: mat.get-color-from-palette($primary, 200) !important;
   }
 
   //Color
   .theme-primary_color {
     color: mat.get-color-from-palette($primary);
+  }
+
+  .theme-primary_color_lighter {
+    color: mat.get-color-from-palette($primary, lighter);
   }
 
   /*Accent*/
@@ -75,6 +87,20 @@
   //Color
   .theme-warn_color {
     color: mat.get-color-from-palette($warn);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: mat.get-color-from-palette($accent, lighter);
+  }
+
+  ::-webkit-scrollbar-track-piece {
+      opacity: 0.5;
+      background: mat.get-color-from-palette($primary, 100)
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: mat.get-color-from-palette($accent);
+      border-radius: 10px;
   }
 }
 
