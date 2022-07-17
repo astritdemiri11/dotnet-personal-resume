@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from './material.module';
 import { SharedService } from './services/shared.service';
+import { LayoutService } from './services/layout/layout.service';
 
 
 
@@ -15,6 +16,7 @@ import { SharedService } from './services/shared.service';
     MaterialModule
   ],
   providers: [
+    LayoutService,
     SharedService
   ]
 })

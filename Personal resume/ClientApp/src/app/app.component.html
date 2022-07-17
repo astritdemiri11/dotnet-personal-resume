@@ -1,1 +1,20 @@
-<app-navigation></app-navigation>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="getSidenavRole()" [mode]="getSidenavMode()"
+    [opened]="isSidenavOpened()">
+    <mat-toolbar>
+      <img src="assets/images/png/logo.png" class="height_50"/>
+    </mat-toolbar>
+
+    <app-menu *ngIf="isHandset()"></app-menu>
+  </mat-sidenav>
+
+  <mat-sidenav-content fxLayout="column">
+    <app-header [sidenav]="sidenav" class="display_block width_100"></app-header>
+
+    <main fxFlex class="overflow-y_scroll">
+      <app-intro fxFlexFill class="intro display_block position_relative theme-primary_background"></app-intro>
+      <app-about-me class="display_block position_relative theme-primary_background_400"></app-about-me>
+      <app-service-type class="display_block position_relative theme-primary_background_400"></app-service-type>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

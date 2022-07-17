@@ -27,6 +27,14 @@
     background-color: mat.get-color-from-palette($primary, 100);
   }
 
+  .theme-primary_background_200 {
+    background-color: mat.get-color-from-palette($primary, 200);
+  }
+
+  .theme-primary_background_300 {
+    background-color: mat.get-color-from-palette($primary, 300);
+  }
+
   .theme-primary_background_400 {
     background-color: mat.get-color-from-palette($primary, 400);
   }

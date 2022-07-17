@@ -2,6 +2,7 @@
 @use '@angular/material' as mat;
 @use "./theme/type/dark-grey_orange" as theme-dark-grey_orange;
 @use "./theme/type/indigo_green" as theme-indigo_green;
+@use "./theme/type/pink_amber" as theme-pink_amber;
 @use "./theme/color" as colors;
 
 @import '~@angular/material/theming';
@@ -12,6 +13,15 @@
 .theme-indigo_green {
     @include angular-material-color(theme-indigo_green.$theme);
     @include colors.universal-colors(theme-indigo_green.$theme);
+
+    transition: all 300ms;
+}
+
+.theme-pink_amber {
+  @include angular-material-color(theme-pink_amber.$theme);
+  @include colors.universal-colors(theme-pink_amber.$theme);
+
+  transition: all 300ms;
 }
 
 @import "./theme/animation";

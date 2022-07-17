@@ -1,0 +1,20 @@
+<div class="bio" fxFlexFill fxLayout="column" fxLayoutAlign="space-around left">
+  <div>
+    <h2 class="bio-name margin-bottom_16p">Hi There! I'm {{ data.name + ' ' + data.surname }}</h2>
+    <h4 class="bio-profession theme-accent_color margin-bottom_16p">{{ data.profession }}</h4>
+
+    <div class="bio-description margin-bottom_16p">
+      <p>{{ data.description }}</p>
+    </div>
+
+    <mat-list>
+      <mat-list-item *ngFor="let personal of data.personal">
+        <span class="key">{{ personal.key }}</span> : <span class="margin-left_8p">{{ personal.value }}</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+  <div>
+    <a href="#download-cv" mat-raised-button color="accent">Download CV</a>
+  </div>
+</div>

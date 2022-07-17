@@ -14,9 +14,9 @@ export class SharedService {
         let isHandset = false;
 
         this.breakpointObserver
-        .observe(Breakpoints.Handset)
-        .pipe(map(result => result.matches), shareReplay())
-        .subscribe(handset => isHandset = handset);
+          .observe(Breakpoints.Handset)
+          .pipe(map(result => result.matches), shareReplay())
+          .subscribe(handset => isHandset = handset);
 
         return isHandset;
       }

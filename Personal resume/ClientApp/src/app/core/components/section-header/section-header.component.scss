@@ -2,7 +2,7 @@
   height: 70px;
 }
 
-.header-name {
+.header-label {
   font-size: 24px;
   font-weight: 500;
   text-transform: uppercase;
@@ -19,6 +19,7 @@
   width: 60px;
   height: 2px;
   left: 33.33%;
+  top: 0;
   transition: 0.3s;
 }
 

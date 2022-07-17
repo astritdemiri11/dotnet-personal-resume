@@ -6,11 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./section-header.component.scss']
 })
 export class SectionHeaderComponent implements OnInit {
-  @Input() name?: string;
+  @Input() label?: string;
 
   ngOnInit(): void {
-    if (this.name == null) {
-      throw new Error('app-section-header, [name] attribute is required');
+    if (this.label == null) {
+      throw new Error('app-section-header, [label] attribute is required');
     }
   }
 
