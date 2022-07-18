@@ -31,6 +31,9 @@ export class MaterialModule {
     iconRegistry.addSvgIconSetInNamespace('other',
       sanitizer.bypassSecurityTrustResourceUrl('./assets/images/svg/other.svg'));
 
+    iconRegistry.addSvgIconSetInNamespace('logo',
+      sanitizer.bypassSecurityTrustResourceUrl('./assets/images/svg/logo.svg'));
+
     iconRegistry.addSvgIconSetInNamespace('social-media',
       sanitizer.bypassSecurityTrustResourceUrl('./assets/images/svg/social-media.svg'));
   }

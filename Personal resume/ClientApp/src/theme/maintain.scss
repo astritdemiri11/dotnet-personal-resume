@@ -28,3 +28,27 @@ body {
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
+
+@media (min-width: 600px) {
+  .container-max-width {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 960px) {
+  .container-max-width {
+    max-width: 880px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-max-width {
+    max-width: 1140px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .menu-item {
+      margin-right: 8px;
+  }
+}

@@ -23,6 +23,10 @@
     background-color: mat.get-color-from-palette($primary, lighter);
   }
 
+  .theme-primary_background_50 {
+    background-color: mat.get-color-from-palette($primary, 50);
+  }
+
   .theme-primary_background_100 {
     background-color: mat.get-color-from-palette($primary, 100);
   }
@@ -84,12 +88,16 @@
   .theme-accent_color_lighter {
     color: mat.get-color-from-palette($accent, lighter);
   }
-
   /*Warn*/
 
   //Background
   .theme-warn_background {
     background-color: mat.get-color-from-palette($warn);
+  }
+
+  //Border
+  .theme-accent_border {
+    border-color: mat.get-color-from-palette($accent) !important;
   }
 
   //Color
@@ -102,13 +110,11 @@
   }
 
   ::-webkit-scrollbar-track-piece {
-      opacity: 0.5;
       background: mat.get-color-from-palette($primary, 100)
   }
 
   ::-webkit-scrollbar-thumb {
       background: mat.get-color-from-palette($accent);
-      border-radius: 10px;
   }
 }
 

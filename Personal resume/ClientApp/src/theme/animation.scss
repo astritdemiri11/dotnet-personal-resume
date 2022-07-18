@@ -96,3 +96,7 @@
   -webkit-animation: fadeInDown 1s;
   animation: fadeInDown 1s;
 }
+
+.transition_300ms {
+  transition: all 300ms ease-in-out;
+}

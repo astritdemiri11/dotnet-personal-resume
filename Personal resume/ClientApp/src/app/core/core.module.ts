@@ -16,6 +16,9 @@ import { WaterRippleComponent } from './components/intro/water-ripple/water-ripp
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
 import { ServiceTypeComponent } from './components/service-type/service-type.component';
 import { ServiceItemComponent } from './components/service-type/service-item/service-item.component';
+import { SocialMediaItemComponent } from './components/intro/social-media/social-media-item/social-media-item.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { SkillItemComponent } from './components/skill/skill-item/skill-item.component';
 
 
 @NgModule({
@@ -31,7 +34,10 @@ import { ServiceItemComponent } from './components/service-type/service-item/ser
     SocialMediaComponent,
     WaterRippleComponent,
     BioComponent,
-    ServiceItemComponent
+    ServiceItemComponent,
+    SocialMediaItemComponent,
+    SkillComponent,
+    SkillItemComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +50,8 @@ import { ServiceItemComponent } from './components/service-type/service-item/ser
     HeaderComponent,
     IntroComponent,
     MenuComponent,
-    ServiceTypeComponent
+    ServiceTypeComponent,
+    SkillComponent
   ]
 })
 export class CoreModule { }

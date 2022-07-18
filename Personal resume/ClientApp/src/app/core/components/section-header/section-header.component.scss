@@ -4,7 +4,6 @@
 
 .header-label {
   font-size: 24px;
-  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -20,7 +19,6 @@
   height: 2px;
   left: 33.33%;
   top: 0;
-  transition: 0.3s;
 }
 
 .header-container:hover .header-border {
@@ -31,5 +29,4 @@
 .header-background {
   top: 20px;
   font-size: 90px;
-  font-weight: 700;
 }

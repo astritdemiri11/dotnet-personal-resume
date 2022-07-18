@@ -1,19 +1,6 @@
-<div fxLayout fxLayoutAlign="space-between center" class="
-  padding-right_16p padding-left_16p theme-primary_background_300
-  theme-primary_border_200 social-media-container fadeInLeft">
+<div fxLayout fxLayoutAlign="space-between center" class="social-media-container padding-right_16p padding-left_16p border-solid_1 theme-primary_background_300
+  theme-primary_border_200 fadeInLeft">
 
-  <ng-container *ngFor="let socialMedia of socialMedias">
-    <a href="#" color="primary" class="social-media-button theme-primary_border_200">
-      <div fxLayout fxLayoutAlign="start stretch">
-        <div fxLayout fxLayoutAlign="center center" class="social-media-icon">
-          <mat-icon [svgIcon]="socialMedia.icon"></mat-icon>
-        </div>
-
-        <div fxFlex fxLayout fxLayoutAlign="center center" class="social-media-label">
-          <span class="font-size_16p">{{ socialMedia.label }}</span>
-        </div>
-      </div>
-    </a>
-  </ng-container>
-
+  <app-social-media-item *ngFor="let socialMedia of socialMedias" [label]="socialMedia.label" [icon]="socialMedia.icon"
+    class="display_block"></app-social-media-item>
 </div>

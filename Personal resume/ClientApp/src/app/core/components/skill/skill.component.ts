@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
+
 import { ServiceItem } from '../../models/service-item/service-item.model';
 
 @Component({
-  selector: 'app-service-type',
-  templateUrl: './service-type.component.html',
-  styleUrls: ['./service-type.component.scss']
+  selector: 'app-skill',
+  templateUrl: './skill.component.html',
+  styleUrls: ['./skill.component.scss']
 })
-export class ServiceTypeComponent {
+export class SkillComponent {
   services: ServiceItem[];
 
   constructor(private sharedService: SharedService) {

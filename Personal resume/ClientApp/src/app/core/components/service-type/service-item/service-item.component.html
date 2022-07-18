@@ -1,1 +1,14 @@
-<p>service-item works!</p>
+<div class="padding_16p">
+  <div (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" fxLayout="column" fxLayoutAlign="center center"
+    class="border-solid_1 theme-primary_background_300 theme-primary_border_200 padding_32p">
+    <div #iconTitle fxLayout="column" fxLayoutAlign="center center">
+      <div fxLayout fxLayoutAlign="center center"
+        class="logo margin-bottom_16p border-solid_1 theme-primary_background theme-primary_border_200">
+        <mat-icon *ngIf="logo" [svgIcon]="logo" class="transition_300ms"></mat-icon>
+      </div>
+      <h2 class="label transition_300ms">{{ label }}</h2>
+    </div>
+
+    <div class="description text-align_center">{{ description }}</div>
+  </div>
+</div>

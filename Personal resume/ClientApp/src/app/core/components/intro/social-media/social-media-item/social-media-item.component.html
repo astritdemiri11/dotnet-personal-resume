@@ -1,0 +1,12 @@
+<a href="#" color="primary"
+  class="social-media-button display_block overflow_hidden padding-right_0 border-solid_1 theme-primary_border_200 transition_300ms">
+  <div fxLayout fxLayoutAlign="start stretch">
+    <div fxLayout fxLayoutAlign="center center" class="social-media-icon opacity_0_65 transition_300ms">
+      <mat-icon *ngIf="icon" [svgIcon]="icon"></mat-icon>
+    </div>
+
+    <div fxFlex fxLayout fxLayoutAlign="center center" class="social-media-label overflow_hidden transition_300ms">
+      <span *ngIf="label" class="font-size_16p">{{ label }}</span>
+    </div>
+  </div>
+</a>
