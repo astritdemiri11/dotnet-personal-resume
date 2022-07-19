@@ -11,14 +11,19 @@ import { MenuComponent } from './components/header/menu/menu.component';
 import { InfoComponent } from './components/intro/info/info.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { ParticlesComponent } from './components/intro/particles/particles.component';
+import { SocialMediaItemComponent } from './components/intro/social-media/social-media-item/social-media-item.component';
 import { SocialMediaComponent } from './components/intro/social-media/social-media.component';
 import { WaterRippleComponent } from './components/intro/water-ripple/water-ripple.component';
+import { PortfolioItemComponent } from './components/portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ResumeDetailItemComponent } from './components/resume/resume-item/resume-detail-item/resume-detail-item.component';
+import { ResumeItemComponent } from './components/resume/resume-item/resume-item.component';
+import { ResumeComponent } from './components/resume/resume.component';
 import { SectionHeaderComponent } from './components/section-header/section-header.component';
-import { ServiceTypeComponent } from './components/service-type/service-type.component';
 import { ServiceItemComponent } from './components/service-type/service-item/service-item.component';
-import { SocialMediaItemComponent } from './components/intro/social-media/social-media-item/social-media-item.component';
-import { SkillComponent } from './components/skill/skill.component';
+import { ServiceTypeComponent } from './components/service-type/service-type.component';
 import { SkillItemComponent } from './components/skill/skill-item/skill-item.component';
+import { SkillComponent } from './components/skill/skill.component';
 
 
 @NgModule({
@@ -37,7 +42,12 @@ import { SkillItemComponent } from './components/skill/skill-item/skill-item.com
     ServiceItemComponent,
     SocialMediaItemComponent,
     SkillComponent,
-    SkillItemComponent
+    SkillItemComponent,
+    ResumeComponent,
+    ResumeItemComponent,
+    ResumeDetailItemComponent,
+    PortfolioComponent,
+    PortfolioItemComponent
   ],
   imports: [
     CommonModule,
@@ -50,6 +60,8 @@ import { SkillItemComponent } from './components/skill/skill-item/skill-item.com
     HeaderComponent,
     IntroComponent,
     MenuComponent,
+    PortfolioComponent,
+    ResumeComponent,
     ServiceTypeComponent,
     SkillComponent
   ]

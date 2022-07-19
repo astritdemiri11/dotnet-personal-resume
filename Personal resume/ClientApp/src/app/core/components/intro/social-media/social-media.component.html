@@ -1,6 +1,6 @@
 <div fxLayout fxLayoutAlign="space-between center" class="social-media-container padding-right_16p padding-left_16p border-solid_1 theme-primary_background_300
   theme-primary_border_200 fadeInLeft">
 
-  <app-social-media-item *ngFor="let socialMedia of socialMedias" [label]="socialMedia.label" [icon]="socialMedia.icon"
-    class="display_block"></app-social-media-item>
+  <app-social-media-item *ngFor="let socialMedia of socialMedias" [item]="socialMedia" class="display_block">
+  </app-social-media-item>
 </div>

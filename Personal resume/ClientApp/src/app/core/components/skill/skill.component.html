@@ -1,10 +1,36 @@
-<app-section-header class="header display_block" label="Skill"></app-section-header>
+<div class="padding-top_64p">
+  <app-section-header class="display_block" label="My Skills"></app-section-header>
 
-<div fxLayout fxLayoutAlign="center">
-  <div class="width_100 container-max-width" [class.padding-aside_16p]="!isHandset()">
-    <div fxFlex fxLayout="row wrap" class="service-type">
-      <app-service-item *ngFor="let service of services" [label]="service.label" [logo]="service.logo"
-        [description]="service.description" fxFlex="33.3333" class="display_block"></app-service-item>
+  <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
+    <div fxFlex fxLayoutAlign="space-between" class="width_100 container-max-width"
+      [class.padding-aside_16p]="!isHandset()">
+      <div fxFlex>
+        <div class="padding-right_16p">
+          <h2 class="margin-bottom_16p">
+            <span class="mat-display-1 font-family_secondary margin_0">All the skills that I have in that field
+              of work are mentioned.</span>
+          </h2>
+
+          <p class="margin-bottom_16p mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">Lorem ipsum
+            dolor sit
+            amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+            eos et accusam et justo duo dolores.</p>
+
+          <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">Stet clita kasd
+            gubergren, no sea takimata
+            sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+            sed diam nonumy eirmod tempor invidunt.
+          </p>
+        </div>
+      </div>
+
+      <div fxFlex>
+        <div fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="16px"
+          class="display_block height_100 padding-left_16p">
+          <app-skill-item *ngFor="let skill of skills" [item]="skill" class="display_block"></app-skill-item>
+        </div>
+      </div>
     </div>
   </div>
 </div>

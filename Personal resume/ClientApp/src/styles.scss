@@ -5,20 +5,20 @@
 @use "./theme/type/pink_amber" as theme-pink_amber;
 @use "./theme/color" as colors;
 
-@import '~@angular/material/theming';
+@include mat.core();
 
-@include angular-material-color(theme-dark-grey_orange.$theme);
+@include mat.all-component-themes(theme-dark-grey_orange.$theme);
 @include colors.universal-colors(theme-dark-grey_orange.$theme);
 
 .theme-indigo_green {
-    @include angular-material-color(theme-indigo_green.$theme);
+    @include mat.all-component-colors(theme-indigo_green.$theme);
     @include colors.universal-colors(theme-indigo_green.$theme);
 
     transition: all 500ms;
 }
 
 .theme-pink_amber {
-  @include angular-material-color(theme-pink_amber.$theme);
+  @include mat.all-component-colors(theme-pink_amber.$theme);
   @include colors.universal-colors(theme-pink_amber.$theme);
 
   transition: all 500ms;

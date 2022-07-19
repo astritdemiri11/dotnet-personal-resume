@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { ServiceItem } from 'src/app/core/models/service-item/service-item.model';
 
 @Component({
   selector: 'app-service-item',
@@ -6,36 +7,30 @@ import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@ang
   styleUrls: ['./service-item.component.scss']
 })
 export class ServiceItemComponent implements OnInit {
-  @Input() label?: string;
-  @Input() logo?: string;
-  @Input() description?: string;
+  @Input() item?: ServiceItem;
 
-  @ViewChild('iconTitle', { static: true }) iconTitle!: ElementRef<HTMLDivElement>;
+  @ViewChild('iconTitle', { static: false }) iconTitle?: ElementRef<HTMLDivElement>;
 
   constructor(
     private renderer2: Renderer2) { }
 
   onMouseOver() {
-    this.renderer2.addClass(this.iconTitle.nativeElement, 'mouse-over');
-    this.renderer2.addClass(this.iconTitle.nativeElement, 'theme-accent_color');
+    if (this.iconTitle) {
+      this.renderer2.addClass(this.iconTitle.nativeElement, 'mouse-over');
+      this.renderer2.addClass(this.iconTitle.nativeElement, 'theme-accent_color');
+    }
   }
 
   onMouseLeave() {
-    this.renderer2.removeClass(this.iconTitle.nativeElement, 'mouse-over');
-    this.renderer2.removeClass(this.iconTitle.nativeElement, 'theme-accent_color');
+    if (this.iconTitle) {
+      this.renderer2.removeClass(this.iconTitle.nativeElement, 'mouse-over');
+      this.renderer2.removeClass(this.iconTitle.nativeElement, 'theme-accent_color');
+    }
   }
 
   ngOnInit() {
-    if (this.label == null) {
-      throw new Error('app-service-item, [label] attribute is required');
-    }
-
-    if (this.logo == null) {
-      throw new Error('app-service-item, [logo] attribute is required');
-    }
-
-    if (this.description == null) {
-      throw new Error('app-service-item, [description] attribute is required');
+    if (this.item == null) {
+      throw new Error('app-service-item, [item] attribute is required');
     }
   }
 }

@@ -3,11 +3,10 @@
 
   <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
     <div class="width_100 container-max-width" [class.padding-aside_16p]="!isHandset()">
-      <div fxFlex fxLayout="row wrap" class="service-type">
-        <app-service-item *ngFor="let service of services" [label]="service.label" [logo]="service.logo"
-          [description]="service.description" fxFlex="33.3333" class="display_block"></app-service-item>
+      <div fxFlex fxLayout="row wrap" class="service-item-container">
+        <app-service-item *ngFor="let service of services" [item]="service" fxFlex="33.3333" class="display_block">
+        </app-service-item>
       </div>
     </div>
   </div>
-
 </div>

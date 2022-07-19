@@ -1,1 +1,17 @@
-<p>skill-item works!</p>
+<ng-container *ngIf="item">
+  <div fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="4px">
+    <div fxLayout fxLayoutAlign="space-between center">
+      <h4 class="margin_0">
+        <span class="mat-subheading-2 font-family_secondary">{{ item.label }}</span>
+      </h4>
+
+      <div>
+        <span class="mat-subheading-2 font-family_secondary theme-accent_color">{{ item.percentage }}%</span>
+      </div>
+    </div>
+
+    <div class="skill-progress-container theme-primary_background_200 position_relative">
+      <div class="skill-progress theme-accent_background transition_300ms" [style.width.%]="item.percentage"></div>
+    </div>
+  </div>
+</ng-container>

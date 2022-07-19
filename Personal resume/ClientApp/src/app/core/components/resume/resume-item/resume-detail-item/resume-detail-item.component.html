@@ -1,0 +1,24 @@
+<ng-container *ngIf="item">
+  <div class="position_relative padding-left_32p">
+    <div (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
+      <div #detailBall
+        class="detail-ball position_absolute top_0 left_ 0 theme-primary_background theme-primary_border_200 transition_300ms">
+      </div>
+
+      <h1 class="margin-bottom_8p">
+        <span class="mat-headline font-family_secondary theme-accent_color">{{ item.label }}</span>
+      </h1>
+
+      <h4 class="margin-bottom_16p">
+        <span class="mat-subheading-2 font-family_secondary opacity_0_65">{{ item.startDate }} - {{ item.endDate
+          }}</span>
+      </h4>
+
+      <h2 class="margin-bottom_16p">
+        <span class="mat-title font-family_secondary">{{ item.subheader }}</span>
+      </h2>
+
+      <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ item.description }}</p>
+    </div>
+  </div>
+</ng-container>

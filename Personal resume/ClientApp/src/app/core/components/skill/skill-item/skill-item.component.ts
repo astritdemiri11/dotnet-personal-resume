@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { SkillItem } from 'src/app/core/models/skill-item/skill-item.model';
 
 @Component({
   selector: 'app-skill-item',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-item.component.scss']
 })
 export class SkillItemComponent implements OnInit {
+  @Input() item?: SkillItem;
 
   constructor() { }
 
   ngOnInit(): void {
+    if (this.item == null) {
+      throw new Error('app-skill-item, [item] attribute is required');
+    }
   }
 
 }

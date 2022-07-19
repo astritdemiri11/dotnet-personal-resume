@@ -88,6 +88,10 @@
   padding-right: 16px;
 }
 
+.padding-bottom_8p {
+  padding-bottom: 8px;
+}
+
 .padding-left_16p {
   padding-left: 16px;
 }
@@ -102,6 +106,10 @@
 
 .padding-right_16p {
   padding-right: 16px;
+}
+
+.padding-top_0 {
+  padding-top: 0 !important;
 }
 
 .padding-top_16p {
@@ -119,6 +127,10 @@
 
 .margin_0 {
   margin: 0 !important;
+}
+
+.margin-bottom_8p {
+  margin-bottom: 8px !important;
 }
 
 .margin-bottom_16p {
@@ -160,16 +172,16 @@
 }
 
 /*Font*/
+.font-family_primary {
+  font-family: 'Roboto', sans-serif;
+}
+
 .font-family_secondary {
   font-family: "Inter", sans-serif !important;
 }
 
 .font-size_16p {
   font-size: 16px;
-}
-
-.font-size_32p {
-  font-size: 32px !important;
 }
 
 .font-weight_300 {

@@ -1,0 +1,16 @@
+<div class="padding-top_64p">
+  <app-section-header class="header display_block" label="Resume"></app-section-header>
+
+  <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
+    <div fxFlex fxLayoutAlign="space-between" class="width_100 container-max-width"
+      [class.padding-aside_16p]="!isHandset()">
+      <div fxFlex>
+        <app-resume-item [item]="experience" class="display_block padding-right_16p"></app-resume-item>
+      </div>
+
+      <div fxFlex>
+        <app-resume-item [item]="education" class="display_block padding-left_16p"></app-resume-item>
+      </div>
+    </div>
+  </div>
+</div>

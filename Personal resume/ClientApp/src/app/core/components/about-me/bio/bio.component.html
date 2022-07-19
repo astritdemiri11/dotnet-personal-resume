@@ -1,15 +1,19 @@
-<div class="bio font-family_secondary" fxFlexFill fxLayout="column" fxLayoutAlign="space-around left">
+<div fxFlexFill fxLayout="column" fxLayoutAlign="space-around left">
   <div>
-    <h2 class="bio-name font-size_32p margin-bottom_16p">Hi There! I'm {{ data.name + ' ' + data.surname }}</h2>
-    <h4 class="bio-profession theme-accent_color margin-bottom_16p">{{ data.profession }}</h4>
+    <h2 class="margin-bottom_16p">
+      <span class="mat-display-1 font-family_secondary">Hi There! I'm {{ data.name + ' ' + data.surname }}</span>
+    </h2>
+    <h4 class="margin-bottom_16p">
+      <span class="mat-headline font-weight_300 font-family_secondary theme-accent_color">{{ data.profession }}</span>
+    </h4>
 
-    <div class="bio-description margin-bottom_16p">
-      <p>{{ data.description }}</p>
+    <div class="margin-bottom_16p">
+      <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ data.description }}</p>
     </div>
 
-    <mat-list>
+    <mat-list class="padding-top_0 opacity_0_65">
       <mat-list-item *ngFor="let personal of data.personal">
-        <span class="key">{{ personal.key }}</span> : <span class="margin-left_8p">{{ personal.value }}</span>
+        <span class="key font-family_secondary">{{ personal.key }}</span> : <span class="margin-left_8p">{{ personal.value }}</span>
       </mat-list-item>
     </mat-list>
   </div>

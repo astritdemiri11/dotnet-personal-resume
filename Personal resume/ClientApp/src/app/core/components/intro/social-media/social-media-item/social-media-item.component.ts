@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-item.model';
 
 @Component({
   selector: 'app-social-media-item',
@@ -6,18 +7,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./social-media-item.component.scss']
 })
 export class SocialMediaItemComponent implements OnInit {
-  @Input() label?: string;
-  @Input() icon?: string;
+  @Input() item?: SocialMediaItem;
 
   constructor() { }
 
   ngOnInit() {
-    if (this.label == null) {
-      throw new Error('app-social-media-item, [label] attribute is required');
-    }
-
-    if (this.icon == null) {
-      throw new Error('app-social-media-item, [icon] attribute is required');
+    if (this.item == null) {
+      throw new Error('app-social-media-item, [item] attribute is required');
     }
   }
 }

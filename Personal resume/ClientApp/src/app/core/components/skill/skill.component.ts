@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { ServiceItem } from '../../models/service-item/service-item.model';
+import { SkillItem } from '../../models/skill-item/skill-item.model';
 
 @Component({
   selector: 'app-skill',
@@ -9,16 +9,16 @@ import { ServiceItem } from '../../models/service-item/service-item.model';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent {
-  services: ServiceItem[];
+  skills: SkillItem[];
 
   constructor(private sharedService: SharedService) {
-    this.services = [
-      { label: 'Sketches', logo: 'logo:sketch', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' },
-      { label: 'UI/UX Design', logo: 'logo:ui_ux', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' },
-      { label: 'Product Design', logo: 'logo:product', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' },
-      { label: 'App Design', logo: 'logo:app', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' },
-      { label: 'Motion Graphics', logo: 'logo:motion', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' },
-      { label: 'Responsive Design', logo: 'logo:responsive', description: 'Lorem ipsum dolor sittem ametamn elit, per sed do eiusmoad teimpor sittem elit inuning utsed sittem.' }
+    this.skills = [
+      { label: 'Photoshop', percentage: 95 },
+      { label: 'Motion Graphic', percentage: 75 },
+      { label: 'Adobe XD', percentage: 90 },
+      { label: 'UX Design', percentage: 85 },
+      { label: 'HTML', percentage: 80 },
+      { label: 'Digital Marketing', percentage: 90 }
     ]
   }
 
