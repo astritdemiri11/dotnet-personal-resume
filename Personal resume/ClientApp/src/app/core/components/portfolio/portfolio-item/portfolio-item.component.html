@@ -1,20 +1,34 @@
 <ng-container *ngIf="item">
-  <div class="padding_16p">
-    <div (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" fxLayout="column" fxLayoutAlign="center center"
-      class="border-solid_1 theme-primary_background_300 theme-primary_border_200 padding_32p">
-      <div #iconTitle fxLayout="column" fxLayoutAlign="center center">
-        <div fxLayout fxLayoutAlign="center center"
-          class="logo margin-bottom_16p border-solid_1 theme-primary_background theme-primary_border_200">
-          <mat-icon *ngIf="item.image" [svgIcon]="item.image" class="opacity_0_5 transition_300ms"></mat-icon>
-        </div>
-        <h2 class="transition_300ms">
-          <span class="mat-title font-family_secondary margin_0">{{ item.label }}</span>
-        </h2>
-      </div>
+  <div #portfolioContainer fxLayout class="portfolio-container position_relative">
+    <div class="portfolio-image position_absolute top_0 left_0 width_100 height_100 transition_300ms"
+      [style.background-image]="'url(' + item.image + ')'"></div>
 
-      <div>
-        <p class="mat-subheading-2 font-family_secondary margin_0 opacity_0_65 text-align_center">{{ item.subheader }}
-        </p>
+    <div class="portfolio-backdrop position_absolute top_0 left_0 width_100 height_100
+        theme-primary_background z-index_1 opacity_0 transition_300ms">
+    </div>
+
+    <div fxFlexFill fxLayout class="padding_16p">
+      <div fxFlex fxLayout fxLayoutAlign="center end"
+        class="portfolio z-index_1 opacity_0 border-solid_1 theme-accent_border_200 transition_300ms">
+        <div class="height_50 padding_8p">
+          <div fxFlexFill fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="16px">
+            <div class="portfolio-button">
+              <button mat-mini-fab>
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="4px">
+              <h1 class="margin_0">
+                <span class="mat-title font-family_secondary">{{ item.label }}</span>
+              </h1>
+
+              <h2 class="margin_0">
+                <span class="mat-subheading-2 font-family_secondary opacity_0_65">{{ item.subheader }}</span>
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,22 @@
+.portfolio-button {
+  margin-top: -20px;
+}
+
+.portfolio-image {
+  background-image: url('/assets/images/jpg/me-2.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.portfolio-container:hover .portfolio-backdrop {
+  opacity: 0.65;
+}
+
+.portfolio-container:hover .portfolio {
+  opacity: 1;
+}
+
+.portfolio-container:hover .portfolio-image {
+  background-size: 120%;
+}

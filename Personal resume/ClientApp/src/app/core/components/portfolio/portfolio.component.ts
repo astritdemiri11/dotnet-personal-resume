@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { LightGallerySettings } from 'lightgallery/lg-settings';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import lgZoom from 'lightgallery/plugins/zoom';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
 import { PortfolioItem } from '../../models/portfolio-item/portfolio-item.model';
@@ -10,6 +13,7 @@ import { PortfolioItem } from '../../models/portfolio-item/portfolio-item.model'
 })
 export class PortfolioComponent {
   portfolios: PortfolioItem[];
+  lightGallerySettings: LightGallerySettings;
 
   constructor(private sharedService: SharedService) {
     this.portfolios = [
@@ -19,7 +23,12 @@ export class PortfolioComponent {
       { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio4.jpg', subheader: 'Design / Marketing' },
       { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio5.jpg', subheader: 'Design / Marketing' },
       { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio6.jpg', subheader: 'Design / Marketing' }
-    ]
+    ];
+
+    this.lightGallerySettings = {
+      counter: false,
+      plugins: [lgThumbnail, lgZoom]
+    };
   }
 
   isHandset() {

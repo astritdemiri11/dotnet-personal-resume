@@ -1,7 +1,9 @@
 import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { LightgalleryModule } from 'lightgallery/angular';
 import { NgParticlesModule } from 'ng-particles';
+import { NgxSlickJsModule } from 'ngx-slickjs';
 
 import { SharedModule } from '../shared/shared.module';
 import { AboutMeComponent } from './components/about-me/about-me.component';
@@ -24,7 +26,8 @@ import { ServiceItemComponent } from './components/service-type/service-item/ser
 import { ServiceTypeComponent } from './components/service-type/service-type.component';
 import { SkillItemComponent } from './components/skill/skill-item/skill-item.component';
 import { SkillComponent } from './components/skill/skill.component';
-
+import { UserReviewItemComponent } from './components/user-review/user-review-item/user-review-item.component';
+import { UserReviewComponent } from './components/user-review/user-review.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +50,24 @@ import { SkillComponent } from './components/skill/skill.component';
     ResumeItemComponent,
     ResumeDetailItemComponent,
     PortfolioComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    UserReviewComponent,
+    UserReviewItemComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
+    LightgalleryModule,
     LayoutModule,
-    NgParticlesModule
+    NgParticlesModule,
+    NgxSlickJsModule.forRoot({
+      links: {
+        jquery: "https://code.jquery.com/jquery-3.4.0.min.js",
+        slickJs: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js",
+        slickCss: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css",
+        slickThemeCss: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+      }
+  })
   ],
   exports: [
     AboutMeComponent,
@@ -63,7 +77,8 @@ import { SkillComponent } from './components/skill/skill.component';
     PortfolioComponent,
     ResumeComponent,
     ServiceTypeComponent,
-    SkillComponent
+    SkillComponent,
+    UserReviewComponent
   ]
 })
 export class CoreModule { }

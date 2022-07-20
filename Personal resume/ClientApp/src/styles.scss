@@ -5,6 +5,10 @@
 @use "./theme/type/pink_amber" as theme-pink_amber;
 @use "./theme/color" as colors;
 
+@import '~lightgallery/scss/lightgallery';
+@import '~lightgallery/scss/lg-zoom';
+@import '~lightgallery/scss/lg-thumbnail';
+
 @include mat.core();
 
 @include mat.all-component-themes(theme-dark-grey_orange.$theme);

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, fromEvent } from 'rxjs';
 
-import { LayoutConfig } from '../../models/layout/layout.model';
+import { LayoutConfig, LayoutEvents } from '../../models/layout/layout.model';
 import { ThemeItem } from '../../models/theme/theme.model';
 
 @Injectable()
@@ -10,12 +10,19 @@ export class LayoutService {
 
   constructor() {
     this.configs = {
-      theme$: new BehaviorSubject<ThemeItem>(ThemeItem.IndigoGreen)
+      theme$: new BehaviorSubject<ThemeItem>(ThemeItem.PinkAmber),
+      events: {
+        windowResize$: fromEvent(window, 'resize')
+      }
     };
   }
 
   getThemeSubject(): BehaviorSubject<ThemeItem> {
     return this.configs.theme$;
+  }
+
+  getEvents(): LayoutEvents {
+    return this.configs.events;
   }
 
   setTheme(theme: ThemeItem) {

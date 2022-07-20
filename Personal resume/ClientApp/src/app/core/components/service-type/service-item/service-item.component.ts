@@ -8,7 +8,6 @@ import { ServiceItem } from 'src/app/core/models/service-item/service-item.model
 })
 export class ServiceItemComponent implements OnInit {
   @Input() item?: ServiceItem;
-
   @ViewChild('iconTitle', { static: false }) iconTitle?: ElementRef<HTMLDivElement>;
 
   constructor(

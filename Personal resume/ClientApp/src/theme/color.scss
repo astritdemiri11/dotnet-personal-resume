@@ -61,6 +61,10 @@
     color: mat.get-color-from-palette($primary, lighter);
   }
 
+  .theme-primary_color_300 {
+    color: mat.get-color-from-palette($primary, 300);
+  }
+
   /*Accent*/
 
   //Background
@@ -96,6 +100,10 @@
   }
 
   //Border
+  .theme-accent_border_200 {
+    border-color: mat.get-color-from-palette($accent, 200) !important;
+  }
+
   .theme-accent_border {
     border-color: mat.get-color-from-palette($accent) !important;
   }

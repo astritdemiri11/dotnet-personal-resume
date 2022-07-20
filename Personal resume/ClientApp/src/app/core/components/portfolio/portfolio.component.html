@@ -1,12 +1,18 @@
-<div class="padding-top_64p">
+<div class="padding-top_128p">
   <app-section-header class="header display_block" label="Portfolio"></app-section-header>
 
   <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
     <div class="width_100 container-max-width" [class.padding-aside_16p]="!isHandset()">
-      <div fxFlex fxLayout="row wrap" class="portfolio-item-container">
-        <app-portfolio-item *ngFor="let portfolio of portfolios" [item]="portfolio" fxFlex="33.3333" class="display_block">
-        </app-portfolio-item>
-      </div>
+      <lightgallery [settings]="lightGallerySettings" fxFlex fxLayout="row wrap"
+        class="portfolio-item-container display_block">
+        <a fxFlex="33.3333" *ngFor="let portfolio of portfolios" [attr.data-src]="portfolio.image"
+          [attr.data-sub-html]="portfolio.label" attr.data-lg-size="480-475-480, 800-791-800, 1406-1390"
+          [attr.data-responsive]="portfolio.image" class="display_block padding_16p">
+          <img class="display_none" [src]="portfolio.image"/>
+          <app-portfolio-item fxFlexFill [item]="portfolio" class="display_block">
+          </app-portfolio-item>
+        </a>
+      </lightgallery>
     </div>
   </div>
 </div>

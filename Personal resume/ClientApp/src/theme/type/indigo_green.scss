@@ -1,7 +1,7 @@
 @use '@angular/material' as mat;
 
-$palette-indigo: mat.define-palette(mat.$indigo-palette, 500, 400, 700);
-$palette-green: mat.define-palette(mat.$green-palette);
+$palette-indigo: mat.define-palette(mat.$indigo-palette, 500, 300, 700);
+$palette-green: mat.define-palette(mat.$green-palette, 300, 100, 700);
 $palette-pink: mat.define-palette(mat.$pink-palette);
 
 $theme: mat.define-dark-theme((
