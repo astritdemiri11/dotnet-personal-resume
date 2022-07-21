@@ -1,7 +1,7 @@
 export interface PortfolioItem {
-  label: string;
   image: string;
-  subheader: string;
+  subtitle: string;
+  title: string;
 }
 
 export class PortfolioItem {

@@ -6,7 +6,7 @@
       <lightgallery [settings]="lightGallerySettings" fxFlex fxLayout="row wrap"
         class="portfolio-item-container display_block">
         <a fxFlex="33.3333" *ngFor="let portfolio of portfolios" [attr.data-src]="portfolio.image"
-          [attr.data-sub-html]="portfolio.label" attr.data-lg-size="480-475-480, 800-791-800, 1406-1390"
+          [attr.data-sub-html]="portfolio.title" attr.data-lg-size="480-475-480, 800-791-800, 1406-1390"
           [attr.data-responsive]="portfolio.image" class="display_block padding_16p">
           <img class="display_none" [src]="portfolio.image"/>
           <app-portfolio-item fxFlexFill [item]="portfolio" class="display_block">

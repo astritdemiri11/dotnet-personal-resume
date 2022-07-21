@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ResumeDetailItem } from 'src/app/core/models/resume-item/resume-item.model';
+import { ResumeDetailItem } from 'src/app/core/models/resume/resume-item.model';
 
 @Component({
   selector: 'app-resume-detail-item',
@@ -16,13 +16,15 @@ export class ResumeDetailItemComponent implements OnInit {
 
   onMouseOver() {
     if (this.detailBall) {
-      this.renderer2.addClass(this.detailBall.nativeElement, 'theme-accent_background');
+      const detailElem = this.detailBall.nativeElement;
+      this.renderer2.addClass(detailElem, 'theme-accent_background');
     }
   }
 
   onMouseLeave() {
     if (this.detailBall) {
-      this.renderer2.removeClass(this.detailBall.nativeElement, 'theme-accent_background');
+      const detailElem = this.detailBall.nativeElement;
+      this.renderer2.removeClass(detailElem, 'theme-accent_background');
     }
   }
 

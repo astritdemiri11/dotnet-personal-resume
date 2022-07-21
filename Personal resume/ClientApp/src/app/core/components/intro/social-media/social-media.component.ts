@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-item.model';
 
 @Component({
@@ -7,16 +7,13 @@ import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-i
   styleUrls: ['./social-media.component.scss']
 })
 export class SocialMediaComponent {
-  socialMedias: SocialMediaItem[];
+  @Input() media?: SocialMediaItem[];
 
-  constructor() {
-    this.socialMedias = [
-      { label: 'LinkedIn', icon: 'social-media:linkedin', url: '' },
-      { label: 'Github', icon: 'social-media:github', url: '' },
-      { label: 'Skype', icon: 'social-media:skype', url: '' },
-      { label: 'Instagram', icon: 'social-media:instagram', url: '' },
-      { label: 'Facebook', icon: 'social-media:facebook', url: '' },
-      { label: 'Twitter', icon: 'social-media:twitter', url: '' },
-    ]
+  constructor() { }
+
+  ngOnInit() {
+    if (this.media == null) {
+      throw new Error('app-social-media, [media] attribute is required');
+    }
   }
 }

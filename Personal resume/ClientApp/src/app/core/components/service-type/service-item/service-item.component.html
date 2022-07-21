@@ -5,10 +5,10 @@
       <div #iconTitle fxLayout="column" fxLayoutAlign="center center">
         <div fxLayout fxLayoutAlign="center center"
           class="logo margin-bottom_16p border-solid_1 theme-primary_background theme-primary_border_200">
-          <mat-icon *ngIf="item.logo" [svgIcon]="item.logo" class="opacity_0_5 transition_300ms"></mat-icon>
+          <mat-icon *ngIf="item.icon" [svgIcon]="item.icon" class="opacity_0_5 transition_300ms"></mat-icon>
         </div>
         <h2 class="transition_300ms">
-          <span class="mat-title font-family_secondary margin_0">{{ item.label }}</span>
+          <span class="mat-title font-family_secondary margin_0">{{ item.title }}</span>
         </h2>
       </div>
 

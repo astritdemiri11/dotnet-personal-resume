@@ -1,6 +1,6 @@
 import { KeyValueItem } from "src/app/shared/models/keyValue/key-value.model";
 
-export interface BioItem {
+export interface Me {
   name: string;
   surname: string;
   profession: string;
@@ -8,5 +8,5 @@ export interface BioItem {
   personal: KeyValueItem[]
 }
 
-export class Bio {
+export class Me {
 }

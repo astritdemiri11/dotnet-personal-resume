@@ -1,0 +1,25 @@
+<ng-container *ngIf="item">
+  <div class="padding_16p height_100">
+    <div fxFlex fxLayout="column" fxLayoutAlign="space-between" class="blog-container">
+      <div fxFlex="0 0 65" class="position_relative">
+        <div class="blog-image position_absolute top_0 left_0 width_100 height_100 transition_300ms"
+          [style.background-image]="'url(' + item.image + ')'"></div>
+      </div>
+
+      <div fxLayout fxLayoutGap="8px">
+        <div fxLayout="column" fxLayoutAlign="space-between start" fxLayoutGap="8px" class="padding-top_8p height_100">
+          <h4 class="margin_0">
+            <span class="mat-body-1 font-family_secondary">By:
+              <span class="theme-accent_color">{{ item.creator }}</span> | <span class="theme-accent_color">{{ item.date
+                }}</span>
+            </span>
+          </h4>
+
+          <a (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" href="#" class="blog-link">
+            <span #blogLink class="mat-title font-family_secondary transition_300ms">{{ item.description }}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

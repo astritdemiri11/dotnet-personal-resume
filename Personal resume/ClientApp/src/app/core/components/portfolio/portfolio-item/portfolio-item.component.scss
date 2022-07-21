@@ -3,7 +3,6 @@
 }
 
 .portfolio-image {
-  background-image: url('/assets/images/jpg/me-2.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
@@ -18,5 +17,5 @@
 }
 
 .portfolio-container:hover .portfolio-image {
-  background-size: 120%;
+  background-size: 110%;
 }

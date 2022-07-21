@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { PortfolioItem } from 'src/app/core/models/portfolio-item/portfolio-item.model';
+import { PortfolioItem } from 'src/app/core/models/portfolio/portfolio-item.model';
 import { LayoutService } from 'src/app/shared/services/layout/layout.service';
 
 @Component({

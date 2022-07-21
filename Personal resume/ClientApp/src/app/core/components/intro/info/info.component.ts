@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Me } from 'src/app/core/models/me/me.model';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
@@ -7,9 +8,17 @@ import { SharedService } from 'src/app/shared/services/shared.service';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent {
+  @Input() me?: Me;
+
   constructor(private sharedService: SharedService) { }
 
   isHandset() {
     return this.sharedService.business.isHandset();
+  }
+
+  ngOnInit() {
+    if (this.me == null) {
+      throw new Error('app-info, [me] attribute is required');
+    }
   }
 }

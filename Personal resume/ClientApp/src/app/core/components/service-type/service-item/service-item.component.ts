@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ServiceItem } from 'src/app/core/models/service-item/service-item.model';
+import { ServiceItem } from 'src/app/core/models/service/service-item.model';
 
 @Component({
   selector: 'app-service-item',
@@ -15,15 +15,19 @@ export class ServiceItemComponent implements OnInit {
 
   onMouseOver() {
     if (this.iconTitle) {
-      this.renderer2.addClass(this.iconTitle.nativeElement, 'mouse-over');
-      this.renderer2.addClass(this.iconTitle.nativeElement, 'theme-accent_color');
+      const iconTitleElem = this.iconTitle.nativeElement;
+
+      this.renderer2.addClass(iconTitleElem, 'mouse-over');
+      this.renderer2.addClass(iconTitleElem, 'theme-accent_color');
     }
   }
 
   onMouseLeave() {
     if (this.iconTitle) {
-      this.renderer2.removeClass(this.iconTitle.nativeElement, 'mouse-over');
-      this.renderer2.removeClass(this.iconTitle.nativeElement, 'theme-accent_color');
+      const iconTitleElem = this.iconTitle.nativeElement;
+
+      this.renderer2.removeClass(iconTitleElem, 'mouse-over');
+      this.renderer2.removeClass(iconTitleElem, 'theme-accent_color');
     }
   }
 

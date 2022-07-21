@@ -10,7 +10,7 @@ export class LayoutService {
 
   constructor() {
     this.configs = {
-      theme$: new BehaviorSubject<ThemeItem>(ThemeItem.PinkAmber),
+      theme$: new BehaviorSubject<ThemeItem>(ThemeItem.Default),
       events: {
         windowResize$: fromEvent(window, 'resize')
       }

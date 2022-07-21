@@ -1,11 +1,11 @@
 <div class="padding-top_128p">
-  <app-section-header class="header display_block" label="Reviews"></app-section-header>
+  <app-section-header class="header display_block" label="Blog"></app-section-header>
 
   <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
     <div class="width_100 container-max-width" [class.padding-aside_16p]="!isHandset()">
       <div slickContainer #slickController="slick" [slickConfig]="slickConfig">
-        <app-user-review-item slickItem *ngFor="let review of reviews" [item]="review" class="review-item display_block">
-        </app-user-review-item>
+        <app-blog-item slickItem *ngFor="let blog of blogs" [item]="blog" class="blog-item display_block">
+        </app-blog-item>
       </div>
     </div>
   </div>

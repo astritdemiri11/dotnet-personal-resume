@@ -1,7 +1,7 @@
 export interface ServiceItem {
-  label: string;
-  logo: string;
   description: string;
+  icon: string;
+  title: string;
 }
 
 export class Service {

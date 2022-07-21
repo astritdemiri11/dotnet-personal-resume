@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { SkillItem } from '../../models/skill-item/skill-item.model';
+import { SkillItem } from '../../models/skill/skill-item.model';
 
 @Component({
   selector: 'app-skill',
@@ -13,12 +13,12 @@ export class SkillComponent {
 
   constructor(private sharedService: SharedService) {
     this.skills = [
-      { label: 'Photoshop', percentage: 95 },
-      { label: 'Motion Graphic', percentage: 75 },
-      { label: 'Adobe XD', percentage: 90 },
-      { label: 'UX Design', percentage: 85 },
-      { label: 'HTML', percentage: 80 },
-      { label: 'Digital Marketing', percentage: 90 }
+      { title: 'Photoshop', percentage: 95 },
+      { title: 'Motion Graphic', percentage: 75 },
+      { title: 'Adobe XD', percentage: 90 },
+      { title: 'UX Design', percentage: 85 },
+      { title: 'HTML', percentage: 80 },
+      { title: 'Digital Marketing', percentage: 90 }
     ]
   }
 

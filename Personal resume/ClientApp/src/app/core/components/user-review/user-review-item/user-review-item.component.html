@@ -1,32 +1,36 @@
 <ng-container *ngIf="item">
-  <div class="padding_16p">
-    <div #reviewContainer (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" fxLayout="column"
-      fxLayoutAlign="space-between" class="review-container">
-      <div fxFlex class="position_relative">
+  <div class="padding_16p height_100">
+    <div fxFlex (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()" fxLayout="column" fxLayoutAlign="space-between"
+      class="review-container">
+      <div fxFlex="0 0 50" class="position_relative">
+        <div class="position_absolute top_0 left_0 margin_8p">
+          <mat-icon class="theme-primary_color opacity_0_65" svgIcon="other:quote"></mat-icon>
+        </div>
+
         <div #reviewTriangle class="review-triangle position_absolute bottom_0 border-solid_1
             theme-primary_background_300 theme-primary_border_200 transition_300ms">
-          </div>
+        </div>
 
         <div #review fxFlex fxLayout="column" fxLayoutAlign="center center"
           class="review border-solid_1 theme-primary_background_300 theme-primary_border_200 transition_300ms">
-          <p class="padding_8p mat-subheading-2 font-family_secondary margin-bottom_8p opacity_0_65 text-align_center">
+          <p class="padding_8p mat-subheading-2 font-family_secondary margin_0 opacity_0_65 text-align_center">
             "{{item.description }}"
           </p>
         </div>
       </div>
 
-      <div fxFlex fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="8px">
+      <div fxFlex="0 0 50" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="8px">
         <div>
-          <img [src]="item.image" class="review-image"/>
+          <img [src]="item.image" class="review-image" />
         </div>
 
         <div fxLayout="column" fxLayoutAlign="space-between center">
           <h2 class="margin_0">
-            <span #reviewLabel class="mat-title font-family_secondary margin_0 transition_300ms">{{ item.label }}</span>
+            <span #reviewLabel class="mat-title font-family_secondary margin_0 transition_300ms">{{ item.fullName }}</span>
           </h2>
 
           <h3>
-            <span class="mat-subheading-2 font-family_secondary margin_0 opacity_0_65">{{ item.subheader }}</span>
+            <span class="mat-subheading-2 font-family_secondary margin_0 opacity_0_65">{{ item.profession }}</span>
           </h3>
         </div>
       </div>

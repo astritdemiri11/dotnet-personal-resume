@@ -1,8 +1,8 @@
 export interface UserReviewItem {
-  label: string;
-  image: string;
-  subheader: string;
   description: string;
+  fullName: string;
+  image: string;
+  profession: string;
 }
 
 export class UserReviewItem {

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResumeItem } from 'src/app/core/models/resume-item/resume-item.model';
+import { ResumeItem } from 'src/app/core/models/resume/resume-item.model';
 
 @Component({
   selector: 'app-resume-item',

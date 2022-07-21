@@ -1,6 +1,6 @@
 export interface SkillItem {
-  label: string;
   percentage: number;
+  title: string;
 }
 
 export class SkillItem {

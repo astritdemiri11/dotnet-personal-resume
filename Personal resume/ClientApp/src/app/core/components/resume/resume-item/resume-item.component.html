@@ -1,12 +1,12 @@
 <ng-container *ngIf="item">
   <div fxLayout="column" fxLayoutGap="16px">
     <div fxLayout fxLayoutAlign="left center" fxLayoutGap="16px">
-      <ng-container *ngIf="item.isMatLogo; else svgLogo">
-        <mat-icon class="icon material-icons-outlined dimension-64p opacity_0_5">{{ item.logo }}</mat-icon>
+      <ng-container *ngIf="item.isMatIcon; else svgLogo">
+        <mat-icon class="icon material-icons-outlined dimension-64p opacity_0_5">{{ item.icon }}</mat-icon>
       </ng-container>
 
       <h1 class="mat-display-1 margin_0">
-        <span class="font-family_secondary">{{ item.label }}</span>
+        <span class="font-family_secondary">{{ item.title }}</span>
       </h1>
     </div>
 
@@ -17,6 +17,6 @@
 
 
   <ng-template #svgLogo>
-    <mat-icon [svgIcon]="item.logo"></mat-icon>
+    <mat-icon [svgIcon]="item.icon"></mat-icon>
   </ng-template>
 </ng-container>

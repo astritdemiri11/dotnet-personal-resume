@@ -1,24 +1,28 @@
-<div fxFlexFill fxLayout="column" fxLayoutAlign="space-around left">
-  <div>
-    <h2 class="margin-bottom_16p">
-      <span class="mat-display-1 font-family_secondary">Hi There! I'm {{ data.name + ' ' + data.surname }}</span>
-    </h2>
-    <h4 class="margin-bottom_16p">
-      <span class="mat-headline font-weight_300 font-family_secondary theme-accent_color">{{ data.profession }}</span>
-    </h4>
+<ng-container *ngIf="me">
+  <div fxFlexFill fxLayout="column" fxLayoutAlign="space-around left">
+    <div>
+      <h2 class="margin-bottom_16p">
+        <span class="mat-display-1 font-family_secondary">Hi There! I'm {{ me.name + ' ' + me.surname }}</span>
+      </h2>
+      <h4 class="margin-bottom_16p">
+        <span class="mat-headline font-weight_300 font-family_secondary theme-accent_color">{{ me.profession }}</span>
+      </h4>
 
-    <div class="margin-bottom_16p">
-      <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ data.description }}</p>
+      <div class="margin-bottom_16p">
+        <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ me.description }}</p>
+      </div>
+
+      <mat-list class="padding-top_0 opacity_0_65">
+        <mat-list-item *ngFor="let personal of me.personal">
+          <span class="key font-family_secondary">{{ personal.key }}</span> : <span class="margin-left_8p">{{
+            personal.value }}</span>
+        </mat-list-item>
+      </mat-list>
     </div>
 
-    <mat-list class="padding-top_0 opacity_0_65">
-      <mat-list-item *ngFor="let personal of data.personal">
-        <span class="key font-family_secondary">{{ personal.key }}</span> : <span class="margin-left_8p">{{ personal.value }}</span>
-      </mat-list-item>
-    </mat-list>
+    <div>
+      <a href="#download-cv" mat-raised-button color="accent">Download CV</a>
+    </div>
   </div>
 
-  <div>
-    <a href="#download-cv" mat-raised-button color="accent">Download CV</a>
-  </div>
-</div>
+</ng-container>

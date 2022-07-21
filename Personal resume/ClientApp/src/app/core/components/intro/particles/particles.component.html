@@ -1,2 +1,4 @@
-<ng-particles id="tsparticles" [options]="particlesOptions" [particlesInit]="particlesInit"
+<ng-container *ngIf="options">
+  <ng-particles id="tsparticles" [options]="options" [particlesInit]="particlesInit"
       (particlesLoaded)="particlesLoaded($event)" fxFlexFill class="display_block"></ng-particles>
+</ng-container>

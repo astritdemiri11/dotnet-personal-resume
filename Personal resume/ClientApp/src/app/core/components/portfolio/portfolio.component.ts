@@ -4,7 +4,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { PortfolioItem } from '../../models/portfolio-item/portfolio-item.model';
+import { PortfolioItem } from '../../models/portfolio/portfolio-item.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -17,12 +17,12 @@ export class PortfolioComponent {
 
   constructor(private sharedService: SharedService) {
     this.portfolios = [
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio1.jpg', subheader: 'Design / Marketing' },
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio2.jpg', subheader: 'Design / Marketing' },
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio3.jpg', subheader: 'Design / Marketing' },
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio4.jpg', subheader: 'Design / Marketing' },
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio5.jpg', subheader: 'Design / Marketing' },
-      { label: 'Product Design', image: './assets/images/jpg/portfolio/portfolio6.jpg', subheader: 'Design / Marketing' }
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio1.jpg', subtitle: 'Design / Marketing' },
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio2.jpg', subtitle: 'Design / Marketing' },
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio3.jpg', subtitle: 'Design / Marketing' },
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio4.jpg', subtitle: 'Design / Marketing' },
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio5.jpg', subtitle: 'Design / Marketing' },
+      { title: 'Product Design', image: './assets/images/jpg/portfolio/portfolio6.jpg', subtitle: 'Design / Marketing' }
     ];
 
     this.lightGallerySettings = {

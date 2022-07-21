@@ -1,6 +1,6 @@
 export interface SocialMediaItem {
-  label: string;
   icon: string;
+  title: string;
   url: string;
 }
 

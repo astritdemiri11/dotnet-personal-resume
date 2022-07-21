@@ -8,6 +8,8 @@ import { NgxSlickJsModule } from 'ngx-slickjs';
 import { SharedModule } from '../shared/shared.module';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { BioComponent } from './components/about-me/bio/bio.component';
+import { BlogItemComponent } from './components/blog/blog-item/blog-item.component';
+import { BlogComponent } from './components/blog/blog.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/menu/menu.component';
 import { InfoComponent } from './components/intro/info/info.component';
@@ -28,6 +30,7 @@ import { SkillItemComponent } from './components/skill/skill-item/skill-item.com
 import { SkillComponent } from './components/skill/skill.component';
 import { UserReviewItemComponent } from './components/user-review/user-review-item/user-review-item.component';
 import { UserReviewComponent } from './components/user-review/user-review.component';
+import { ContactMeComponent } from './components/contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { UserReviewComponent } from './components/user-review/user-review.compon
     PortfolioComponent,
     PortfolioItemComponent,
     UserReviewComponent,
-    UserReviewItemComponent
+    UserReviewItemComponent,
+    BlogComponent,
+    BlogItemComponent,
+    ContactMeComponent
   ],
   imports: [
     CommonModule,
@@ -71,6 +77,7 @@ import { UserReviewComponent } from './components/user-review/user-review.compon
   ],
   exports: [
     AboutMeComponent,
+    BlogComponent,
     HeaderComponent,
     IntroComponent,
     MenuComponent,
