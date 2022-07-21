@@ -1,1 +1,21 @@
-<p>contact-item works!</p>
+<div fxLayout fxLayoutAlign="left" fxLayoutGap="16px">
+  <div class="contact-icon-container border-solid_1 theme-primary_border_200 transition_300ms">
+    <div fxLayout fxLayoutAlign="start stretch">
+      <div fxLayout fxLayoutAlign="center center" class="contact-icon opacity_0_65 transition_300ms">
+        <mat-icon>{{ icon }}</mat-icon>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="8px">
+    <h3 class="margin_0">
+      <span class="mat-title font-family_secondary margin_0">{{ label }}</span>
+    </h3>
+
+    <div>
+      <div *ngFor="let value of values">
+        <span class="mat-subheading-2 font-family_secondary opacity_0_65">{{ value }}</span>
+      </div>
+    </div>
+  </div>
+</div>

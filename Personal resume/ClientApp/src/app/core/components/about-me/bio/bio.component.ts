@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Required } from 'src/app/core/decorators/required/required.decorator';
 import { IMe } from 'src/app/core/models/me/me.model';
 
 @Component({
@@ -7,13 +8,5 @@ import { IMe } from 'src/app/core/models/me/me.model';
   styleUrls: ['./bio.component.scss']
 })
 export class BioComponent {
-  @Input() me?: IMe;
-
-  constructor() { }
-
-  ngOnInit() {
-    if (this.me == null) {
-      throw new Error('app-bio, [me] attribute is required');
-    }
-  }
+  @Input() @Required('app-bio') me?: IMe;
 }

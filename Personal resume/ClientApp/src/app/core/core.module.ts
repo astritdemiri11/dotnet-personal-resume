@@ -10,6 +10,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { BioComponent } from './components/about-me/bio/bio.component';
 import { BlogItemComponent } from './components/blog/blog-item/blog-item.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { ContactFormComponent } from './components/contact-me/contact-form/contact-form.component';
+import { ContactItemComponent } from './components/contact-me/contact-item/contact-item.component';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/header/menu/menu.component';
@@ -35,34 +37,35 @@ import { UserReviewComponent } from './components/user-review/user-review.compon
 @NgModule({
   declarations: [
     AboutMeComponent,
+    BioComponent,
+    BlogComponent,
+    BlogItemComponent,
+    ContactFormComponent,
+    ContactItemComponent,
+    ContactMeComponent,
     HeaderComponent,
     InfoComponent,
     IntroComponent,
     MenuComponent,
     ParticlesComponent,
-    SectionHeaderComponent,
-    ServiceTypeComponent,
-    SocialMediaComponent,
-    WaterRippleComponent,
-    BioComponent,
-    ServiceItemComponent,
-    SocialMediaItemComponent,
-    SkillComponent,
-    SkillItemComponent,
-    ResumeComponent,
-    ResumeItemComponent,
-    ResumeDetailItemComponent,
     PortfolioComponent,
     PortfolioItemComponent,
+    ResumeComponent,
+    ResumeDetailItemComponent,
+    ResumeItemComponent,
+    SectionHeaderComponent,
+    ServiceItemComponent,
+    ServiceTypeComponent,
+    SkillComponent,
+    SkillItemComponent,
+    SocialMediaComponent,
+    SocialMediaItemComponent,
     UserReviewComponent,
     UserReviewItemComponent,
-    BlogComponent,
-    BlogItemComponent,
-    ContactMeComponent
+    WaterRippleComponent
   ],
   imports: [
     CommonModule,
-    SharedModule,
     LightgalleryModule,
     LayoutModule,
     NgParticlesModule,
@@ -73,7 +76,8 @@ import { UserReviewComponent } from './components/user-review/user-review.compon
         slickCss: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css",
         slickThemeCss: "https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
       }
-  })
+  }),
+  SharedModule
   ],
   exports: [
     AboutMeComponent,

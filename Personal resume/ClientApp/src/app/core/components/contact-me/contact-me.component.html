@@ -1,68 +1,51 @@
-<div class="padding-top_128p">
-  <app-section-header class="display_block" label="Contact me"></app-section-header>
+<ng-container *ngIf="me && me.contact">
+  <div class="padding-top_128p">
+    <app-section-header class="display_block" label="Contact me"></app-section-header>
 
-  <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
-    <div fxFlex fxLayoutAlign="space-between" class="width_100 container-max-width"
-      [class.padding-aside_16p]="!isHandset()">
-      <div fxFlex>
-        <div fxLayout="column" fxLayoutGap="16px" class="padding-right_16p">
-          <h2>
-            <span class="mat-display-1 font-family_secondary margin_0">Just say Hello</span>
-          </h2>
+    <div fxLayout fxLayoutAlign="center" class="padding-top_16p">
+      <div fxFlex fxLayoutAlign="space-between" class="width_100 container-max-width"
+        [class.padding-aside_16p]="!isHandset()">
+        <div fxFlex>
+          <div fxLayout="column" fxLayoutGap="16px" class="padding-right_16p">
+            <h2>
+              <span class="mat-display-1 font-family_secondary margin_0">Just say Hello</span>
+            </h2>
 
-          <div fxLayout="column" fxLayoutGap="16px">
-            <mat-form-field color="accent" appearance="fill">
-              <mat-label>Your Name</mat-label>
-              <input matInput>
-            </mat-form-field>
-
-            <mat-form-field color="accent" appearance="fill">
-              <mat-label>Your Email</mat-label>
-              <input matInput type="email">
-            </mat-form-field>
-
-            <mat-form-field color="accent" appearance="fill">
-              <mat-label>Your Subject</mat-label>
-              <input matInput>
-            </mat-form-field>
-
-            <mat-form-field color="accent" appearance="fill">
-              <mat-label>Your Message</mat-label>
-              <textarea matInput rows="6"></textarea>
-            </mat-form-field>
-          </div>
-
-          <div fxLayout fxLayoutAlign="end">
-            <button mat-raised-button color="accent">Send Message</button>
+            <app-contact-form class="display_block"></app-contact-form>
           </div>
         </div>
-      </div>
 
-      <div fxFlex>
-        <div fxLayout="column" fxLayoutGap="16px" class="padding-left_16p">
-          <h2>
-            <span class="mat-display-1 font-family_secondary margin_0">Contact Info</span>
-          </h2>
+        <div fxFlex>
+          <div fxLayout="column" fxLayoutGap="16px" class="padding-left_16p">
+            <h2>
+              <span class="mat-display-1 font-family_secondary margin_0">Contact Info</span>
+            </h2>
 
-          <div>
-            <p class="mat-subheading-2 font-family_secondary margin_0">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed suscipit feugiat.
-            </p>
-          </div>
+            <div>
+              <p class="mat-subheading-2 font-family_secondary margin_0 opacity_0_65">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ligula nulla tincidunt id faucibus sed suscipit feugiat.
+              </p>
+            </div>
 
-          <div>
+            <div fxLayout="column" fxLayoutGap="8px">
+              <app-contact-item label="Email" icon="email" matIcon [values]="me.contact.emails"></app-contact-item>
+              <app-contact-item label="Phone" icon="phone" matIcon [values]="me.contact.phones"></app-contact-item>
+              <app-contact-item label="Address" icon="home_pin" matIcon [values]="me.contact.addresses"></app-contact-item>
+            </div>
 
-          </div>
+            <div>
+              <h2 class="margin_0">
+                <span class="mat-title font-family_secondary margin_0 opacity_0_65">Visit my social profile and get connected</span>
+              </h2>
+            </div>
 
-          <div>
-
-          </div>
-
-          <div>
-
+            <div fxLayout fxLayoutAlign="start center" fxLayoutGap="16px">
+              <app-social-media-item *ngFor="let social of me.media" [item]="social" class="display_block">
+              </app-social-media-item>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</ng-container>

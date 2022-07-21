@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, Inject, Input, OnInit, Renderer2 } from '@angular/core';
+import { Required } from 'src/app/core/decorators/required/required.decorator';
 
 @Component({
   selector: 'app-water-ripple',
@@ -7,7 +8,7 @@ import { Component, ElementRef, Inject, Input, OnInit, Renderer2 } from '@angula
   styleUrls: ['./water-ripple.component.scss']
 })
 export class WaterRippleComponent implements OnInit {
-  @Input() image?: string;
+  @Input() @Required('app-water-ripple') image?: string;
 
   constructor(
     private elementRef: ElementRef,
@@ -15,10 +16,6 @@ export class WaterRippleComponent implements OnInit {
     @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
-    if (this.image == null) {
-      throw new Error('app-water-ripple, [image] attribute is required');
-    }
-
     let script = this.renderer2.createElement('script') as HTMLScriptElement;
     script.src = './assets/js/plugins/water-ripple.min.js';
 

@@ -1,4 +1,5 @@
 import { Component, Input, Renderer2 } from '@angular/core';
+import { Required } from 'src/app/core/decorators/required/required.decorator';
 import { loadFull } from 'tsparticles';
 import { Container, Engine, ParticlesOptions } from 'tsparticles-engine';
 
@@ -8,9 +9,9 @@ import { Container, Engine, ParticlesOptions } from 'tsparticles-engine';
   styleUrls: ['./particles.component.scss']
 })
 export class ParticlesComponent {
-  @Input() options?: ParticlesOptions;
+  @Input() @Required('app-particles') options?: ParticlesOptions;
 
-  constructor(private renderer2: Renderer2) {}
+  constructor(private renderer2: Renderer2) { }
 
   particlesLoaded(container: Container): void {
     if(container.canvas.element) {
@@ -20,11 +21,5 @@ export class ParticlesComponent {
 
   async particlesInit(engine: Engine): Promise<void> {
     await loadFull(engine);
-  }
-
-  ngOnInit() {
-    if (this.options == null) {
-      throw new Error('app-particles, [options] attribute is required');
-    }
   }
 }

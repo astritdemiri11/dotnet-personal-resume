@@ -1,4 +1,5 @@
-import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, ViewChild } from '@angular/core';
+import { Required } from 'src/app/core/decorators/required/required.decorator';
 import { IService } from 'src/app/core/models/service/service.model';
 
 @Component({
@@ -6,8 +7,8 @@ import { IService } from 'src/app/core/models/service/service.model';
   templateUrl: './service-item.component.html',
   styleUrls: ['./service-item.component.scss']
 })
-export class ServiceItemComponent implements OnInit {
-  @Input() item?: IService;
+export class ServiceItemComponent {
+  @Input() @Required('app-service-item') item?: IService;
   @ViewChild('iconTitle', { static: false }) iconTitle?: ElementRef<HTMLDivElement>;
 
   constructor(
@@ -28,12 +29,6 @@ export class ServiceItemComponent implements OnInit {
 
       this.renderer2.removeClass(iconTitleElem, 'mouse-over');
       this.renderer2.removeClass(iconTitleElem, 'theme-accent_color');
-    }
-  }
-
-  ngOnInit() {
-    if (this.item == null) {
-      throw new Error('app-service-item, [item] attribute is required');
     }
   }
 }

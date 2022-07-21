@@ -18,9 +18,9 @@ export class ContactMeComponent {
       I also enjoy working out, traveling, watching movies, going out for dinner, and having great intellectual conversations!`,
       birthday: 'June 11, 1994',
       contact: {
-        addresses: ['Tirane 1001, Albania'],
-        emails: ['astritdemiri11@gmail.com'],
-        phones: ['+355 69-640-2822']
+        addresses: ['Tirane 1001, Albania', 'Tirane 1001, Albania'],
+        emails: ['hire-me@astritdemiri.com', 'astritdemiri11@gmail.com'],
+        phones: ['+355 69-640-2822', '+355 69-640-2822']
       },
       languages: ['English', 'Italian', 'Turkish'],
       media: [

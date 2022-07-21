@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Required } from 'src/app/core/decorators/required/required.decorator';
 import { ISocialMedia } from 'src/app/core/models/social-media/social-media.model';
 
 @Component({
@@ -7,13 +8,5 @@ import { ISocialMedia } from 'src/app/core/models/social-media/social-media.mode
   styleUrls: ['./social-media.component.scss']
 })
 export class SocialMediaComponent {
-  @Input() media?: ISocialMedia[];
-
-  constructor() { }
-
-  ngOnInit() {
-    if (this.media == null) {
-      throw new Error('app-social-media, [media] attribute is required');
-    }
-  }
+  @Input() @Required('app-social-media') media?: ISocialMedia[];
 }
