@@ -9,13 +9,40 @@
       </h4>
 
       <div class="margin-bottom_16p">
-        <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ me.description }}</p>
+        <p class="margin_0 mat-subheading-2 font-weight_300 font-family_secondary opacity_0_65">{{ me.bio }}</p>
       </div>
 
       <mat-list class="padding-top_0 opacity_0_65">
-        <mat-list-item *ngFor="let personal of me.personal">
-          <span class="key font-family_secondary">{{ personal.key }}</span> : <span class="margin-left_8p">{{
-            personal.value }}</span>
+        <mat-list-item>
+          <span class="key font-family_secondary">Birthday</span> :
+          <span class="margin-left_8p">{{ me.birthday }}</span>
+        </mat-list-item>
+
+        <ng-container *ngIf="me.contact">
+          <mat-list-item *ngIf="me.contact.phones.length > 0">
+            <span class="key font-family_secondary">Phone</span> :
+            <span class="margin-left_8p">{{ me.contact.phones[0] }}</span>
+          </mat-list-item>
+
+          <mat-list-item *ngIf="me.contact.phones.length > 0">
+            <span class="key font-family_secondary">Email</span> :
+            <span class="margin-left_8p">{{ me.contact.emails[0] }}</span>
+          </mat-list-item>
+
+          <mat-list-item *ngIf="me.contact.phones.length > 0">
+            <span class="key font-family_secondary">Address</span> :
+            <span class="margin-left_8p">{{ me.contact.addresses[0] }}</span>
+          </mat-list-item>
+        </ng-container>
+
+        <mat-list-item>
+          <span class="key font-family_secondary">Birthday</span> :
+          <span class="margin-left_8p">{{ me.birthday }}</span>
+        </mat-list-item>
+
+        <mat-list-item>
+          <span class="key font-family_secondary">Freelance</span> :
+          <span class="margin-left_8p">Available</span>
         </mat-list-item>
       </mat-list>
     </div>

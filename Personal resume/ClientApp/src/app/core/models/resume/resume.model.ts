@@ -1,4 +1,4 @@
-export interface ResumeDetailItem {
+export interface IResumeDetail {
   description: string;
   endDate: string;
   startDate: string;
@@ -6,12 +6,13 @@ export interface ResumeDetailItem {
   title: string;
 }
 
-export interface ResumeItem {
-  details: ResumeDetailItem[];
+export interface IResume {
+  details: IResumeDetail[];
   icon: string;
   isMatIcon: boolean;
   title: string;
 }
 
-export class ResumeItem {
+export class Resume {
+
 }

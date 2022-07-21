@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Me } from 'src/app/core/models/me/me.model';
+import { IMe } from 'src/app/core/models/me/me.model';
 
 @Component({
   selector: 'app-bio',
@@ -7,7 +7,7 @@ import { Me } from 'src/app/core/models/me/me.model';
   styleUrls: ['./bio.component.scss']
 })
 export class BioComponent {
-  @Input() me?: Me;
+  @Input() me?: IMe;
 
   constructor() { }
 

@@ -4,7 +4,7 @@ import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { PortfolioItem } from '../../models/portfolio/portfolio-item.model';
+import { IPortfolio } from '../../models/portfolio/portfolio.model';
 
 @Component({
   selector: 'app-portfolio',
@@ -12,7 +12,7 @@ import { PortfolioItem } from '../../models/portfolio/portfolio-item.model';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  portfolios: PortfolioItem[];
+  portfolios: IPortfolio[];
   lightGallerySettings: LightGallerySettings;
 
   constructor(private sharedService: SharedService) {

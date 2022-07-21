@@ -1,4 +1,4 @@
-export interface ServiceItem {
+export interface IService {
   description: string;
   icon: string;
   title: string;

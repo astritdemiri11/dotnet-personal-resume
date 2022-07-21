@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
 import { ClickMode, EasingType, HoverMode, MoveDirection, OutMode } from 'tsparticles-engine';
 
-import { Me } from '../../models/me/me.model';
-import { SocialMediaItem } from '../../models/social-media/social-media-item.model';
+import { IMe } from '../../models/me/me.model';
 
 @Component({
   selector: 'app-intro',
@@ -11,36 +10,33 @@ import { SocialMediaItem } from '../../models/social-media/social-media-item.mod
   styleUrls: ['./intro.component.scss']
 })
 export class IntroComponent {
-  me: Me;
-  socialMedia: SocialMediaItem[];
+  me: IMe;
   particleOptions: any;
 
   constructor(private sharedService: SharedService) {
     this.me = {
-      name: 'Astrit',
-      surname: 'Demiri',
-      profession: 'Web Developer',
-      description: `I would describe myself as someone who is honest, caring, intelligent, motivated, hardworking, and ambitious.
+      bio: `I would describe myself as someone who is honest, caring, intelligent, motivated, hardworking, and ambitious.
       I am an easy going person & don’t get easily disturbed by downs in my life. I like to help people to find solutions to their problems.
       I also enjoy working out, traveling, watching movies, going out for dinner, and having great intellectual conversations!`,
-      personal: [
-        { key: 'Birthday', value: 'June 11, 1994' },
-        { key: 'Phone', value: '+355 69-640-2822' },
-        { key: 'Email', value: 'astritdemiri11@gmail.com' },
-        { key: 'Address', value: 'Tirane 1001, Albania' },
-        { key: 'Language', value: 'English, Italian, Turkish' },
-        { key: 'Freelance', value: 'Available' }
-      ]
+      birthday: 'June 11, 1994',
+      contact: {
+        addresses: ['Tirane 1001, Albania'],
+        emails: ['astritdemiri11@gmail.com'],
+        phones: ['+355 69-640-2822']
+      },
+      languages: ['English', 'Italian', 'Turkish'],
+      media: [
+        { title: 'LinkedIn', icon: 'social-media:linkedin', url: '' },
+        { title: 'Github', icon: 'social-media:github', url: '' },
+        { title: 'Skype', icon: 'social-media:skype', url: '' },
+        { title: 'Instagram', icon: 'social-media:instagram', url: '' },
+        { title: 'Facebook', icon: 'social-media:facebook', url: '' },
+        { title: 'Twitter', icon: 'social-media:twitter', url: '' },
+      ],
+      name: 'Astrit',
+      profession: 'Web Developer',
+      surname: 'Demiri'
     }
-
-    this.socialMedia = [
-      { title: 'LinkedIn', icon: 'social-media:linkedin', url: '' },
-      { title: 'Github', icon: 'social-media:github', url: '' },
-      { title: 'Skype', icon: 'social-media:skype', url: '' },
-      { title: 'Instagram', icon: 'social-media:instagram', url: '' },
-      { title: 'Facebook', icon: 'social-media:facebook', url: '' },
-      { title: 'Twitter', icon: 'social-media:twitter', url: '' },
-    ]
 
     this.particleOptions = {
       fpsLimit: 120,

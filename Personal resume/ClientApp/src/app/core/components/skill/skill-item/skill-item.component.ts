@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SkillItem } from 'src/app/core/models/skill/skill-item.model';
+import { ISkill } from 'src/app/core/models/skill/skill.model';
 
 @Component({
   selector: 'app-skill-item',
@@ -7,7 +7,7 @@ import { SkillItem } from 'src/app/core/models/skill/skill-item.model';
   styleUrls: ['./skill-item.component.scss']
 })
 export class SkillItemComponent implements OnInit {
-  @Input() item?: SkillItem;
+  @Input() item?: ISkill;
 
   constructor() { }
 

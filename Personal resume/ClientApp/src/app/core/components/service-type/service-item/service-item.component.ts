@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ServiceItem } from 'src/app/core/models/service/service-item.model';
+import { IService } from 'src/app/core/models/service/service.model';
 
 @Component({
   selector: 'app-service-item',
@@ -7,7 +7,7 @@ import { ServiceItem } from 'src/app/core/models/service/service-item.model';
   styleUrls: ['./service-item.component.scss']
 })
 export class ServiceItemComponent implements OnInit {
-  @Input() item?: ServiceItem;
+  @Input() item?: IService;
   @ViewChild('iconTitle', { static: false }) iconTitle?: ElementRef<HTMLDivElement>;
 
   constructor(

@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { BlogItem } from 'src/app/core/models/blog/blog-item.model';
+import { IBlog } from 'src/app/core/models/blog/blog.model';
 
 @Component({
   selector: 'app-blog-item',
@@ -7,7 +7,7 @@ import { BlogItem } from 'src/app/core/models/blog/blog-item.model';
   styleUrls: ['./blog-item.component.scss']
 })
 export class BlogItemComponent implements OnInit {
-  @Input() item?: BlogItem;
+  @Input() item?: IBlog;
   @ViewChild('blogLink', { static: false }) blogLink?: ElementRef<HTMLAnchorElement>;
 
   constructor(private renderer2: Renderer2) { }

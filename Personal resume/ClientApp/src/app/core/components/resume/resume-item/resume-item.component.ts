@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ResumeItem } from 'src/app/core/models/resume/resume-item.model';
+import { IResume } from 'src/app/core/models/resume/resume.model';
 
 @Component({
   selector: 'app-resume-item',
@@ -7,7 +7,7 @@ import { ResumeItem } from 'src/app/core/models/resume/resume-item.model';
   styleUrls: ['./resume-item.component.scss']
 })
 export class ResumeItemComponent implements OnInit {
-  @Input() item?: ResumeItem;
+  @Input() item?: IResume;
 
   constructor() { }
 

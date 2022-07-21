@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-item.model';
+import { ISocialMedia } from 'src/app/core/models/social-media/social-media.model';
 
 @Component({
   selector: 'app-social-media',
@@ -7,7 +7,7 @@ import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-i
   styleUrls: ['./social-media.component.scss']
 })
 export class SocialMediaComponent {
-  @Input() media?: SocialMediaItem[];
+  @Input() media?: ISocialMedia[];
 
   constructor() { }
 

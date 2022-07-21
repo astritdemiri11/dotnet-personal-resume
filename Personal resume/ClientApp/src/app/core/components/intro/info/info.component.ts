@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Me } from 'src/app/core/models/me/me.model';
+import { IMe } from 'src/app/core/models/me/me.model';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { SharedService } from 'src/app/shared/services/shared.service';
   styleUrls: ['./info.component.scss']
 })
 export class InfoComponent {
-  @Input() me?: Me;
+  @Input() me?: IMe;
 
   constructor(private sharedService: SharedService) { }
 

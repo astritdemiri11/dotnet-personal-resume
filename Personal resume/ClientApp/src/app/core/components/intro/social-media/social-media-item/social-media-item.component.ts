@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-item.model';
+import { ISocialMedia } from 'src/app/core/models/social-media/social-media.model';
 
 @Component({
   selector: 'app-social-media-item',
@@ -7,7 +7,7 @@ import { SocialMediaItem } from 'src/app/core/models/social-media/social-media-i
   styleUrls: ['./social-media-item.component.scss']
 })
 export class SocialMediaItemComponent implements OnInit {
-  @Input() item?: SocialMediaItem;
+  @Input() item?: ISocialMedia;
 
   constructor() { }
 

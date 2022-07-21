@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { SkillItem } from '../../models/skill/skill-item.model';
+import { ISkill } from '../../models/skill/skill.model';
 
 @Component({
   selector: 'app-skill',
@@ -9,7 +9,7 @@ import { SkillItem } from '../../models/skill/skill-item.model';
   styleUrls: ['./skill.component.scss']
 })
 export class SkillComponent {
-  skills: SkillItem[];
+  skills: ISkill[];
 
   constructor(private sharedService: SharedService) {
     this.skills = [

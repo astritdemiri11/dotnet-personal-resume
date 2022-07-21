@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { UserReviewItem } from 'src/app/core/models/user-review/user-review-item.model';
+import { IUserReview } from 'src/app/core/models/user-review/user-review.model';
 
 @Component({
   selector: 'app-user-review-item',
@@ -7,7 +7,7 @@ import { UserReviewItem } from 'src/app/core/models/user-review/user-review-item
   styleUrls: ['./user-review-item.component.scss']
 })
 export class UserReviewItemComponent implements OnInit {
-  @Input() item?: UserReviewItem;
+  @Input() item?: IUserReview;
 
   @ViewChild('review', { static: false }) review?: ElementRef<HTMLDivElement>;
   @ViewChild('reviewTriangle', { static: false }) reviewTriangle?: ElementRef<HTMLDivElement>;

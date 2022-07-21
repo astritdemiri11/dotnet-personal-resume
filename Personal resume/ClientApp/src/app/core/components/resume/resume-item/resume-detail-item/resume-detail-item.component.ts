@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { ResumeDetailItem } from 'src/app/core/models/resume/resume-item.model';
+import { IResumeDetail } from 'src/app/core/models/resume/resume.model';
 
 @Component({
   selector: 'app-resume-detail-item',
@@ -7,7 +7,7 @@ import { ResumeDetailItem } from 'src/app/core/models/resume/resume-item.model';
   styleUrls: ['./resume-detail-item.component.scss']
 })
 export class ResumeDetailItemComponent implements OnInit {
-  @Input() item?: ResumeDetailItem;
+  @Input() item?: IResumeDetail;
 
   @ViewChild('detailBall', { static: false }) detailBall?: ElementRef<HTMLDivElement>;
 

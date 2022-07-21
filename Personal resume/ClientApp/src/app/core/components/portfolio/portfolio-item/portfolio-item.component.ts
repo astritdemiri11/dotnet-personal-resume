@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { PortfolioItem } from 'src/app/core/models/portfolio/portfolio-item.model';
+import { IPortfolio } from 'src/app/core/models/portfolio/portfolio.model';
 import { LayoutService } from 'src/app/shared/services/layout/layout.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { LayoutService } from 'src/app/shared/services/layout/layout.service';
   styleUrls: ['./portfolio-item.component.scss']
 })
 export class PortfolioItemComponent implements OnInit, AfterViewInit {
-  @Input() item?: PortfolioItem;
+  @Input() item?: IPortfolio;
 
   @ViewChild('portfolioContainer', { static: false }) portfolioContainer?: ElementRef<HTMLDivElement>;
   constructor(private renderer2: Renderer2, private layoutService: LayoutService) {

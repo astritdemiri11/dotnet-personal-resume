@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Slick } from 'ngx-slickjs';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { BlogItem } from '../../models/blog/blog-item.model';
+import { IBlog } from '../../models/blog/blog.model';
 
 @Component({
   selector: 'app-blog',
@@ -10,7 +10,7 @@ import { BlogItem } from '../../models/blog/blog-item.model';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
-  blogs: BlogItem[];
+  blogs: IBlog[];
   slickConfig: Slick.Config;
 
   constructor(private sharedService: SharedService) {

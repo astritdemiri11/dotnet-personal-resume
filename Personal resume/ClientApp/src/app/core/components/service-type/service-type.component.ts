@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
-import { ServiceItem } from '../../models/service/service-item.model';
+import { IService } from '../../models/service/service.model';
 
 @Component({
   selector: 'app-service-type',
@@ -8,7 +8,7 @@ import { ServiceItem } from '../../models/service/service-item.model';
   styleUrls: ['./service-type.component.scss']
 })
 export class ServiceTypeComponent {
-  services: ServiceItem[];
+  services: IService[];
 
   constructor(private sharedService: SharedService) {
     this.services = [

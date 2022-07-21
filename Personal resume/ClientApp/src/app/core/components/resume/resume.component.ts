@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedService } from 'src/app/shared/services/shared.service';
-import { ResumeItem } from '../../models/resume/resume-item.model';
+import { IResume } from '../../models/resume/resume.model';
 
 @Component({
   selector: 'app-resume',
@@ -8,8 +8,8 @@ import { ResumeItem } from '../../models/resume/resume-item.model';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
-  experience: ResumeItem;
-  education: ResumeItem;
+  experience: IResume;
+  education: IResume;
 
   constructor(private sharedService: SharedService) {
     this.experience = {

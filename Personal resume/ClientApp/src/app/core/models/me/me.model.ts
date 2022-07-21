@@ -1,11 +1,18 @@
-import { KeyValueItem } from "src/app/shared/models/keyValue/key-value.model";
+import { IContact } from '../contact/contact.model';
+import { IResume } from '../resume/resume.model';
+import { ISocialMedia } from '../social-media/social-media.model';
 
-export interface Me {
+export interface IMe {
+  bio: string;
+  birthday?: string;
+  contact?: IContact;
+  education?: IResume;
+  experience?: IResume;
+  languages?: string[];
+  media?: ISocialMedia[];
   name: string;
-  surname: string;
   profession: string;
-  description: string;
-  personal: KeyValueItem[]
+  surname: string;
 }
 
 export class Me {

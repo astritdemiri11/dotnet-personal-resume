@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Slick } from 'ngx-slickjs';
 import { SharedService } from 'src/app/shared/services/shared.service';
 
-import { UserReviewItem } from '../../models/user-review/user-review-item.model';
+import { IUserReview } from '../../models/user-review/user-review.model';
 
 @Component({
   selector: 'app-user-review',
@@ -10,7 +10,7 @@ import { UserReviewItem } from '../../models/user-review/user-review-item.model'
   styleUrls: ['./user-review.component.scss']
 })
 export class UserReviewComponent {
-  reviews: UserReviewItem[];
+  reviews: IUserReview[];
   slickConfig: Slick.Config;
 
   constructor(private sharedService: SharedService) {
