@@ -2,7 +2,7 @@
   <mat-sidenav #sidenav class="sidenav" fixedInViewport [attr.role]="getSidenavRole()" [mode]="getSidenavMode()"
     [opened]="isSidenavOpened()">
     <mat-toolbar>
-      <img src="assets/images/png/logo.png" class="height_50"/>
+      <mat-icon svgIcon="logo:v1" class="logo theme-accent_color"></mat-icon>
     </mat-toolbar>
 
     <app-menu *ngIf="isHandset()"></app-menu>
@@ -12,15 +12,8 @@
     <app-header [sidenav]="sidenav" class="display_block width_100"></app-header>
 
     <main fxFlex class="overflow-y_scroll">
-      <app-intro fxFlexFill class="intro display_block position_relative theme-primary_background"></app-intro>
-      <app-about-me class="display_block position_relative theme-primary_background_400"></app-about-me>
-      <app-service-type class="display_block position_relative padding-bottom_32p theme-primary_background_400"></app-service-type>
-      <app-skill class="display_block position_relative theme-primary_background"></app-skill>
-      <app-resume class="display_block position_relative padding-bottom_32p theme-primary_background"></app-resume>
-      <app-portfolio class="display_block position_relative padding-bottom_32p theme-primary_background_400"></app-portfolio>
-      <app-user-review class="display_block position_relative padding-bottom_32p theme-primary_background"></app-user-review>
-      <app-blog class="display_block position_relative padding-bottom_32p theme-primary_background_400"></app-blog>
-      <app-contact-me class="display_block position_relative padding-bottom_32p theme-primary_background"></app-contact-me>
+      <router-outlet></router-outlet>
+      <app-footer class="display_block position_relative padding-bottom_32p theme-primary_background"></app-footer>
     </main>
   </mat-sidenav-content>
 </mat-sidenav-container>

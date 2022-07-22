@@ -1,6 +1,6 @@
 
 @use '@angular/material' as mat;
-@use "./theme/type/dark-grey_orange" as theme-dark-grey_orange;
+@use "./theme/type/dark-grey_cyan" as theme-dark-grey_cyan;
 @use "./theme/type/indigo_green" as theme-indigo_green;
 @use "./theme/type/pink_amber" as theme-pink_amber;
 @use "./theme/color" as colors;
@@ -11,8 +11,8 @@
 
 @include mat.core();
 
-@include mat.all-component-themes(theme-dark-grey_orange.$theme);
-@include colors.universal-colors(theme-dark-grey_orange.$theme);
+@include mat.all-component-themes(theme-dark-grey_cyan.$theme);
+@include colors.universal-colors(theme-dark-grey_cyan.$theme);
 
 .theme-indigo_green {
     @include mat.all-component-colors(theme-indigo_green.$theme);

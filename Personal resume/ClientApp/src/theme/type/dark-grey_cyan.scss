@@ -1,0 +1,15 @@
+@use '@angular/material' as mat;
+@use "./palette/dark-grey" as palette-dark-grey;
+@use "./palette/cyan" as palette-cyan;
+
+$palette-dark-grey: mat.define-palette(palette-dark-grey.$palette, 500, 300, 700);
+$palette-cyan: mat.define-palette(palette-cyan.$palette);
+$palette-pink: mat.define-palette(mat.$pink-palette);
+
+$theme: mat.define-dark-theme((
+  color: (
+    primary: $palette-dark-grey,
+    accent: $palette-cyan,
+    warn: $palette-pink
+  )
+));

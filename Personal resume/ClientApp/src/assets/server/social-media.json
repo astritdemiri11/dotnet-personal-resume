@@ -1,0 +1,49 @@
+[
+  {
+    "icon": "social-media:linkedIn",
+    "link": {
+      "app": "linkedin://astritdemiri11",
+      "url": "https://www.linkedin.com/in/astritdemiri11"
+    },
+    "title": "LinkedIn"
+  },
+  {
+    "icon": "social-media:github",
+    "link": {
+      "app": "github://",
+      "url": "https://github.com/astritdemiri11"
+    },
+    "title": "Github"
+  },
+  {
+    "icon": "social-media:skype",
+    "link": {
+      "app": "skype:demiri.astrit.94"
+    },
+    "title": "Skype"
+  },
+  {
+    "icon": "social-media:instagram",
+    "link": {
+      "app": "instagram://user?username=astritdemiri11",
+      "url": "https://www.instagram.com/astritdemiri11"
+    },
+    "title": "Instagram"
+  },
+  {
+    "icon": "social-media:facebook",
+    "link": {
+      "app": "fb://profile/100000493002158",
+      "url": "https://www.facebook.com/astritdemiri11"
+    },
+    "title": "Facebook"
+  },
+  {
+    "icon": "social-media:twitter",
+    "link": {
+      "app": "twitter:///user?screen_name=PAGE",
+      "url": "https://twitter.com/astritdemiri11"
+    },
+    "title": "Twitter"
+  }
+]
